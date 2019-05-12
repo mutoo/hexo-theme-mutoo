@@ -1,0 +1,18 @@
+@import "~normalize-scss/sass/normalize/import-now";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    // 1 rem = 10 px
+    font-size: 62.5%
+}
+
+.mt-body {
+    font-size: 1rem;
+
+    a {
+        color: inherit;
+    }
+}

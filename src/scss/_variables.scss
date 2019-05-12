@@ -1,0 +1,18 @@
+// MEDIA QUERY
+// -----------
+$width-article-max: 700px;
+$width-site-max: 1170px;
+$mq-breakpoints: (
+    mobile: 320px,
+    article: $width-article-max,
+    tablet: 740px,
+    desktop: 980px,
+    max: $width-site-max,
+    wide: 1300px, // not in use
+);
+
+// FONTS
+// -----
+
+$font-sans-serif: Roboto, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$font-monospace: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", Courier, monospace;

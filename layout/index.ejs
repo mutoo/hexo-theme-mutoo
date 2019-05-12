@@ -1,0 +1,24 @@
+<%- partial('_partial/header-index') %>
+<div class="mt-posts">
+    <% page.posts.forEach((post, idx) => {
+        let isLatest = !page.prev && idx === 0; %>
+    <%- partial('_partial/article', {post: post, full: isLatest}) %>
+    <% }); %>
+</div>
+<% if (page.total > 1){ %>
+    <nav id="page-nav">
+        <%
+            const prev_text = "&laquo; " + __('prev');
+            const next_text = __('next') + " &raquo;" %>
+        <%- paginator({
+            prev_text: prev_text,
+            next_text: next_text
+        }) %>
+    </nav>
+<% } %>
+<section class="mt-recent">
+    <h1>Recent</h1>
+    <div>
+        <%- list_posts() %>
+    </div>
+</section>

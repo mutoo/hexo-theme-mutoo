@@ -1,0 +1,7 @@
+.mt-blog {
+    margin: 2rem;
+
+    @include mq($from: tablet) {
+        margin: 3;
+    }
+}

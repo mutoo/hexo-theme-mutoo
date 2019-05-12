@@ -1,0 +1,22 @@
+<article class="mt-article  mt-typography" id="<%= post.slug %>">
+    <header class="mt-article__header">
+        <h1 class="mt-title">
+            <a href="<%= url_for(post.path) %>"><%- post.title %></a>
+        </h1>
+    </header>
+    <% if(full){ %>
+        <%- post.content %>
+        <footer class="mt-article__footer">
+            <% if (post.comments && config.disqus_shortname){ %>
+                <a href="<%- post.permalink %>#disqus_thread" class="mt-article__comment-link"><%= __('comment') %></a>
+            <% } %>
+        </footer>
+    <% } else { %>
+        <%- post.excerpt %>
+        <footer class="mt-article__footer">
+            <% if (theme.excerpt_link){ %>
+                <a href="<%- url_for(post.path) %>#more" class="mt-article__more-link"><%= theme.excerpt_link %></a>
+            <% } %>
+        </footer>
+    <% } %>
+</article>
