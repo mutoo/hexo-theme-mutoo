@@ -1,18 +1,26 @@
 <%- partial('_partial/header-index') %>
 <div class="mt-posts">
-    <% page.posts.forEach((post, idx) => {
-        let isLatest = !page.prev && idx === 0; %>
-    <%- partial('_partial/article', {post: post, full: isLatest}) %>
+    <%
+    let lastPost;
+    page.posts.forEach((post, idx) => {
+    if (!lastPost || lastPost && (lastPost.date.year() !== post.date.year())) { %>
+        <div class="mt-posts__year"><%= post.date.year()%></div>
+    <% }
+
+        let isLatest = !page.prev && idx === 0;
+        let articleClass = isLatest? 'mt-article--latest': '';
+        lastPost = post; %>
+    <%- partial('_partial/article', {post: post, full: isLatest, articleClass}) %>
     <% }); %>
 </div>
 <% if (page.total > 1){ %>
-    <nav id="page-nav">
+    <nav class="mt-page-nav">
         <%
             const prev_text = "&laquo; " + __('prev');
             const next_text = __('next') + " &raquo;" %>
         <%- paginator({
-            prev_text: prev_text,
-            next_text: next_text
+            prev_text,
+            next_text
         }) %>
     </nav>
 <% } %>

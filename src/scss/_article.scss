@@ -1,10 +1,12 @@
 $color-border-light: #eee;
 
 .mt-article {
+    transition: all ease 1s;
+
     @include mq($from: tablet) {
-        border-radius: 5px;
+        border-radius: 0.5rem;
         padding: 3rem;
-        border: 1px solid $color-border-light;
+        border: 0.1rem solid white;
     }
 
     @include mq($from: desktop) {
@@ -12,7 +14,7 @@ $color-border-light: #eee;
     }
 
     & + & {
-        margin-top: 3rem;
+        margin-top: 4rem;
 
         @include mq($from: tablet) {
             margin-top: 5rem;
@@ -20,14 +22,67 @@ $color-border-light: #eee;
     }
 }
 
+.mt-article__header {
+    padding-bottom: 0.5em;
+    border-bottom: 0.1rem dashed $color-border-light;
+    margin-bottom: 1em;
+
+    @include mq($from: tablet) {
+        margin-bottom: 2em;
+    }
+}
+
+.mt-article__metas {
+    font-family: $font-sans-serif;
+    text-transform: uppercase;
+    color: #999;
+
+    .icon {
+        color: #ccc;
+    }
+}
+
+.mt-article__categories {
+}
+
+.mt-article__category-link {
+    &:not(:last-child) {
+        display: none;
+
+        &::after {
+            content: ' :: ';
+            pointer-events: none;
+        }
+
+        @include mq($from: tablet) {
+            display: inline;
+        }
+    }
+}
+
+.mt-article__title {
+    .mt-article & {
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
 .mt-article__footer {
     display: flex;
-    justify-content: flex-end;
-    border-top: 1px solid $color-border-light;
+    justify-content: center;
+    border-top: 0.1rem dashed $color-border-light;
     padding-top: 2rem;
 
     @include mq($from: tablet) {
         padding-top: 3rem;
+    }
+
+    .mt-article__header + & {
+        padding-top: 0;
+        border-top: none;
     }
 }
 
@@ -42,14 +97,20 @@ $color-border-light: #eee;
 
 .footnote-ref {
     font-family: $font-monospace;
-    color: crimson;
+    background-color: rgba(246, 216, 64, 0.58);
+    color: black;
+    margin-left: 0.3rem;
+
+    // hide the footnote in the post list
+    .mt-posts .mt-article:not(.mt-article--latest) & {
+        display: none;
+    }
 }
 
-.info {
+.mt-info {
     border-radius: 0.5rem;
     border-left: 0.4rem solid #31b8cc;
     padding: 1rem calc(2em - 0.5rem);
     margin-bottom: 1em;
     background-color: #eee;
-    max-width: 40rem;
 }

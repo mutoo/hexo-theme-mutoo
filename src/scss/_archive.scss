@@ -1,0 +1,19 @@
+.mt-posts {
+    margin-bottom: 3rem;
+
+    @include mq($from: tablet) {
+        margin-bottom: 5rem;
+    }
+}
+
+.mt-posts__year {
+    margin: 3rem 0 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: $font-monospace;
+
+    @include mq($from: tablet) {
+        margin: 4rem 0 3rem;
+        font-size: 3.5rem;
+    }
+}
