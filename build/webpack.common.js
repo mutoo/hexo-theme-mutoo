@@ -4,6 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 import scss from './parts/scss';
 import javascript from './parts/javascript';
+import svg from './parts/svg';
 
 export default merge([
     {
@@ -25,4 +26,5 @@ export default merge([
     },
     javascript(),
     scss(),
+    svg(),
 ]);
