@@ -1,12 +1,8 @@
 $color-border-light: #eee;
 
 .mt-article {
-    transition: all ease 1s;
-
     @include mq($from: tablet) {
-        border-radius: 0.5rem;
         padding: 3rem;
-        border: 0.1rem solid white;
     }
 
     @include mq($from: desktop) {
@@ -15,10 +11,6 @@ $color-border-light: #eee;
 
     & + & {
         margin-top: 4rem;
-
-        @include mq($from: tablet) {
-            margin-top: 5rem;
-        }
     }
 }
 
@@ -66,8 +58,17 @@ $color-border-light: #eee;
     }
 
     a {
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: all ease 0.3s;
+
+        &:hover {
+            text-decoration-color: black;
+        }
     }
+}
+
+.mt-article__body {
 }
 
 .mt-article__footer {
@@ -86,31 +87,16 @@ $color-border-light: #eee;
     }
 }
 
-.header-anchor {
-    display: none;
-}
+.mt-article__footer-action {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background-color: #eee;
+    color: #333;
+    transition: all ease 0.3s;
 
-.highlight {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-.footnote-ref {
-    font-family: $font-monospace;
-    background-color: rgba(246, 216, 64, 0.58);
-    color: black;
-    margin-left: 0.3rem;
-
-    // hide the footnote in the post list
-    .mt-posts .mt-article:not(.mt-article--latest) & {
-        display: none;
+    &:hover {
+        color: #eee;
+        background-color: #333;
     }
 }
 
-.mt-info {
-    border-radius: 0.5rem;
-    border-left: 0.4rem solid #31b8cc;
-    padding: 1rem calc(2em - 0.5rem);
-    margin-bottom: 1em;
-    background-color: #eee;
-}

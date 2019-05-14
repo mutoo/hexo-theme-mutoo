@@ -1,9 +1,16 @@
 @import "scss/variables";
 @import "scss/mixins";
+
 @import "scss/base";
 @import "scss/icon";
 @import "scss/layout";
 @import "scss/typography";
+
 @import "scss/article";
 @import "scss/archive";
+
+@import "scss/header";
+@import "scss/markdown";
 @import "scss/pagination";
+@import "scss/comment";
+@import "scss/footer";

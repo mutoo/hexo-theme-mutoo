@@ -1,0 +1,18 @@
+.mt-footer {
+    margin: 0 auto;
+    max-width: $width-article-max;
+    display: flex;
+    justify-content: space-between;
+
+    font-family: $font-sans-serif;
+    font-size: 1.6rem;
+
+    @include mq($from: tablet) {
+        font-size: 1.8rem;
+        padding: 0 4rem;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

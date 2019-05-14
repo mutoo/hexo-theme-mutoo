@@ -1,0 +1,35 @@
+.mt-header {
+    margin-bottom: 3rem;
+
+    @include mq($from: tablet) {
+        margin-bottom: 4rem;
+    }
+}
+
+.mt-header--index {
+}
+
+.mt-header--mini {
+}
+
+.mt-header__outer {
+    font-family: $font-monospace;
+    margin: 0 auto;
+    max-width: $width-article-max;
+}
+
+.mt-header__title {
+    font-size: 2.0rem;
+
+    @include mq($from: tablet) {
+        font-size: 2.5rem;
+    }
+}
+
+.mt-header__subtitle {
+    font-size: 1.4rem;
+
+    @include mq($from: tablet) {
+        font-size: 1.8rem;
+    }
+}

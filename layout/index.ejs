@@ -1,14 +1,18 @@
 <%- partial('_partial/header-index') %>
-<div class="mt-posts">
+<div class="mt-archives">
     <%
     let lastPost;
     page.posts.forEach((post, idx) => {
     if (!lastPost || lastPost && (lastPost.date.year() !== post.date.year())) { %>
-        <div class="mt-posts__year"><%= post.date.year()%></div>
+        <div class="mt-archives__year">
+            <a href="/archives/<%= post.date.year() %>/">
+                &lt;!--<%= post.date.year() %>--&gt;
+            </a>
+        </div>
     <% }
 
-        let isLatest = !page.prev && idx === 0;
-        let articleClass = isLatest? 'mt-article--latest': '';
+        let isLatest = is_home() && !page.prev && idx === 0;
+        let articleClass = isLatest ? 'mt-article--latest' : '';
         lastPost = post; %>
     <%- partial('_partial/article', {post: post, full: isLatest, articleClass}) %>
     <% }); %>
@@ -24,9 +28,3 @@
         }) %>
     </nav>
 <% } %>
-<section class="mt-recent">
-    <h1>Recent</h1>
-    <div>
-        <%- list_posts() %>
-    </div>
-</section>

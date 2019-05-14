@@ -1,0 +1,36 @@
+.header-anchor {
+    display: none;
+}
+
+.highlight {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mt-info {
+    border-radius: 0.5rem;
+    border-left: 0.4rem solid #31b8cc;
+    padding: 1rem calc(2em - 0.5rem);
+    margin-bottom: 1em;
+    background-color: #eee;
+}
+
+.footnote-ref {
+    font-family: $font-monospace;
+    background-color: rgba(246, 216, 64, 0.58);
+    color: #5c220c;
+    border-radius: 0.3rem;
+    margin-left: 0.3rem;
+
+    // hide the footnote in the post list
+    .mt-archives .mt-article:not(.mt-article--latest) & {
+        display: none;
+    }
+}
+
+.footnote-backref {
+    // hide the footnote in the post list
+    .mt-archives .mt-article:not(.mt-article--latest) & {
+        display: none;
+    }
+}

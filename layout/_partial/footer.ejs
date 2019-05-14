@@ -1,4 +1,11 @@
 <footer class="mt-footer">
-    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-    <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <p class="mt-footer__copyright">
+        <svg class="icon">
+            <use xlink:href="#icon-copyright"></use>
+        </svg>
+        2010-<%= date(new Date(), 'YYYY') %>
+        <a href="//mutoo.im"><%= config.author || config.title %></a></p>
+    <p class="mt-footer__powered-by">
+        <%= __('powered_by') %> <a href="//hexo.io/" target="_blank">Hexo</a>
+    </p>
 </footer>

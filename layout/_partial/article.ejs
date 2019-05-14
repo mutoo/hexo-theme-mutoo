@@ -1,8 +1,16 @@
 <article class="mt-article  mt-typography <%= articleClass %>" id="<%= post.slug %>">
     <header class="mt-article__header">
         <div class="mt-article__metas">
-            <span class="mt-article__date"><%= post.date.format('MMM DD')%></span>
-            <svg class="icon"><use xlink:href="#icon-pencil"></use></svg>
+            <span class="mt-article__date">
+                <% if(is_post() || is_page()) { %>
+                    <%= post.date.format('LL') %>
+                <% } else { %>
+                    <%= post.date.format('MMM DD') %>
+                <% } %>
+            </span>
+            <svg class="icon">
+                <use xlink:href="#icon-pencil"></use>
+            </svg>
             <span class="mt-article__categories">
             <%- list_categories(post.categories, {
                 show_count: false,
@@ -17,23 +25,35 @@
         </h1>
     </header>
     <% if(full){ %>
-        <%- post.content %>
+        <div class="mt-article__body">
+            <%- post.content %>
+        </div>
         <footer class="mt-article__footer">
             <% if (post.comments && config.disqus_shortname){ %>
-                <a href="<%- post.permalink %>#disqus_thread" class="mt-article__comment-link">
-                    <svg class="icon"><use xlink:href="#icon-commenting"></use></svg>
+                <a href="<%- post.permalink %>#disqus_thread"
+                   class="mt-article__footer-action  mt-article__comment-link">
+                    <svg class="icon">
+                        <use xlink:href="#icon-commenting"></use>
+                    </svg>
                     <%= __('comment') %></a>
             <% } %>
         </footer>
+
     <% } else { %>
-        <%- post.excerpt %>
+        <div class="mt-article__body">
+            <%- post.excerpt %>
+        </div>
         <footer class="mt-article__footer">
             <% if (theme.excerpt_link){ %>
-                <a href="<%- url_for(post.path) %>#more" class="mt-article__more-link">
-                    <svg class="icon"><use xlink:href="#icon-link"></use></svg>
+                <a href="<%- url_for(post.path) %>#more"
+                   class="mt-article__footer-action  mt-article__more-link">
+                    <svg class="icon">
+                        <use xlink:href="#icon-eye"></use>
+                    </svg>
                     <%= theme.excerpt_link %>
                 </a>
             <% } %>
         </footer>
     <% } %>
 </article>
+

@@ -1,0 +1,9 @@
+.mt-comments {
+    margin: 0 auto 3rem;
+    max-width: $width-article-max;
+
+    @include mq($from: tablet) {
+        padding: 0 4rem;
+        margin-bottom: 4rem;
+    }
+}

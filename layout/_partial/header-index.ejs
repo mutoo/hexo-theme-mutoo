@@ -1,2 +1,24 @@
 <header class="mt-header  mt-header--index">
+    <div class="mt-header__outer">
+        <h1 class="mt-header__title"><a href="/"><%= config.title %></a></h1>
+        <p class="mt-header__subtitle"><%= config.subtitle %></p>
+        <div class="mt-header__filter">
+            <% if(is_category()) { %>
+                <svg class="icon">
+                    <use xlink:href="#icon-filter"></use>
+                </svg>
+                Category: <%= page.category %>
+            <% } else if(is_tag()) { %>
+                <svg class="icon">
+                    <use xlink:href="#icon-filter"></use>
+                </svg>
+                Tag: <%= page.category %>
+            <% } else if(is_year()) { %>
+                <svg class="icon">
+                    <use xlink:href="#icon-filter"></use>
+                </svg>
+                Year: <%= page.year %>
+            <% } %>
+        </div>
+    </div>
 </header>
