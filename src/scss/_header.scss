@@ -1,8 +1,8 @@
 .mt-header {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 
     @include mq($from: tablet) {
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -13,9 +13,10 @@
 }
 
 .mt-header__outer {
-    font-family: $font-monospace;
+    position: relative;
     margin: 0 auto;
     max-width: $width-article-max;
+    font-family: $font-monospace;
 }
 
 .mt-header__title {
@@ -31,5 +32,41 @@
 
     @include mq($from: tablet) {
         font-size: 1.8rem;
+    }
+}
+
+.mt-header__filter {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+    @include mq($from: tablet) {
+        font-size: 1.8rem;
+    }
+}
+
+.mt-header__menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mt-header__menu-toggle {
+    width: 5.3rem;
+
+    @include mq($from: tablet) {
+        display: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.mt-header__menu-wrap {
+    display: none;
+
+    @include mq($from: tablet) {
+        display: block;
     }
 }

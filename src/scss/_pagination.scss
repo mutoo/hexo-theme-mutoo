@@ -26,12 +26,18 @@
             transition: width ease-in-out 0.3s;
         }
 
-        &.prev::after {
-            right: 0;
+        &.prev {
+            margin-right: 0.5em;
+            &::after {
+                right: 0;
+            }
         }
 
-        &.next::after {
-            left: 0;
+        &.next {
+            margin-left: 0.5em;
+            &::after {
+                left: 0;
+            }
         }
 
         &:focus::after,

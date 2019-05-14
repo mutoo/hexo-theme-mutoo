@@ -84,7 +84,7 @@
     }
 
     p {
-        margin: 0;
+        margin: 0 0 1em;
         text-indent: 2em;
 
         &:first-of-type {
@@ -95,9 +95,9 @@
             //}
         }
 
-        &:not(:last-child) {
-            margin-bottom: 1em;
-        }
+        //&:not(:last-child) {
+        //    margin-bottom: 1em;
+        //}
     }
 
     img {

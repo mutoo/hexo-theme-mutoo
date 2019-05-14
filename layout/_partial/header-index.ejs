@@ -2,6 +2,7 @@
     <div class="mt-header__outer">
         <h1 class="mt-header__title"><a href="/"><%= config.title %></a></h1>
         <p class="mt-header__subtitle"><%= config.subtitle %></p>
+        <%- partial('_partial/header-menu') %>
         <div class="mt-header__filter">
             <% if(is_category()) { %>
                 <svg class="icon">

@@ -3,7 +3,7 @@
         <div class="mt-article__metas">
             <span class="mt-article__date">
                 <% if(is_post() || is_page()) { %>
-                    <%= post.date.format('LL') %>
+                    <%= post.date.format('MMM DD, YYYY') %>
                 <% } else { %>
                     <%= post.date.format('MMM DD') %>
                 <% } %>
@@ -39,7 +39,7 @@
             <% } %>
         </footer>
 
-    <% } else { %>
+    <% } else if(post.excerpt && is_home()) { %>
         <div class="mt-article__body">
             <%- post.excerpt %>
         </div>

@@ -2,6 +2,10 @@
 <section class="mt-tag-cloud">
     <h1>Tag Cloud</h1>
     <div>
-        <%- tagcloud() %>
+        <%- tagcloud({
+            min_font: 2,
+            max_font: 5,
+            unit: 'rem'
+        }) %>
     </div>
 </section>

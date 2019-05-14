@@ -12,6 +12,14 @@ $color-border-light: #eee;
     & + & {
         margin-top: 4rem;
     }
+
+    .mt-archives--title-only & + & {
+        margin-top: 2rem;
+
+        @include mq($from: tablet) {
+            margin-top: 0;
+        }
+    }
 }
 
 .mt-article__header {
@@ -21,6 +29,12 @@ $color-border-light: #eee;
 
     @include mq($from: tablet) {
         margin-bottom: 2em;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
     }
 }
 
@@ -79,11 +93,6 @@ $color-border-light: #eee;
 
     @include mq($from: tablet) {
         padding-top: 3rem;
-    }
-
-    .mt-article__header + & {
-        padding-top: 0;
-        border-top: none;
     }
 }
 

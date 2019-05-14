@@ -1,6 +1,6 @@
 <%- partial('_partial/header-index') %>
 <%- partial('_partial/dots') %>
-<div class="mt-archives">
+<div class="mt-archives  mt-archives--title-only">
     <%
     let lastPost;
     page.posts.forEach((post, idx) => {
@@ -12,9 +12,8 @@
         </div>
     <% }
 
-        let isLatest = is_home() && !page.prev && idx === 0;
-        let articleClass = isLatest ? 'mt-article--latest' : '';
         lastPost = post; %>
-    <%- partial('_partial/article', {post: post, full: isLatest, articleClass}) %>
+    <%- partial('_partial/article', {post: post, full: false, articleClass: 'mt-article--archive'}) %>
     <% }); %>
 </div>
+<%- partial('_partial/pagination') %>

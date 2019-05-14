@@ -6,7 +6,10 @@
 
 html {
     // 1 rem = 10 px
-    font-size: 62.5%
+    font-size: 62.5%;
+
+    // not support on iOS yet.
+    scroll-behavior: smooth;
 }
 
 .mt-body {

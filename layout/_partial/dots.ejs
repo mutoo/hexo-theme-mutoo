@@ -1,0 +1,7 @@
+<% if (is_home() && page.posts.length > 1){ %>
+    <nav class="mt-dot-nav" data-min-alpha="0.2" data-max-alpha="0.8">
+        <% page.posts.forEach((post, idx) => { %>
+            <a href="#<%= post.slug %>" title="<%= post.title %>"></a>
+        <% }); %>
+    </nav>
+<% } %>

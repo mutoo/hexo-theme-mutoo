@@ -1,0 +1,14 @@
+.mt-menu {
+    font-family: $font-monospace;
+    font-size: 1.8rem;
+}
+
+.mt-menu__link {
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.3rem;
+
+    &.active {
+        background-color: black;
+        color: white;
+    }
+}

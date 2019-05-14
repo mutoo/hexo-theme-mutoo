@@ -1,0 +1,14 @@
+<div class="mt-header__menu">
+    <div class="mt-header__menu-toggle">
+        <img src="//placehold.it/40x40" alt="">
+    </div>
+    <div class="mt-header__menu-wrap">
+        <div class="mt-menu">
+            <% for (var item in theme.menu){
+                let isActive = is_current(theme.menu[item]); %>
+            <a class="mt-menu__link <%= isActive ? 'active' : '' %>"
+               href="<%- url_for(theme.menu[item]) %>"><%= item %></a>
+            <% } %>
+        </div>
+    </div>
+</div>

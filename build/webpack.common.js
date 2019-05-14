@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import merge from 'webpack-merge';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
@@ -18,6 +19,10 @@ export default merge([
             path: path.resolve(__dirname, '../source/assets'),
         },
         plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+            }),
+
             // Use MiniCssExtractPlugin to generate a .css file
             new MiniCssExtractPlugin({
                 filename: 'style.css',
