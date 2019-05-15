@@ -26,7 +26,10 @@
     </header>
     <% if(full){ %>
         <div class="mt-article__body">
-            <%- post.content %>
+            <%- partial("_partial/front-matter") %>
+            <div class="mt-article__main">
+                <%- post.content %>
+            </div>
         </div>
         <footer class="mt-article__footer">
             <% if (post.comments && config.disqus_shortname){ %>
@@ -41,7 +44,10 @@
 
     <% } else if(post.excerpt && is_home()) { %>
         <div class="mt-article__body">
-            <%- post.excerpt %>
+            <%- partial("_partial/front-matter") %>
+            <div class="mt-article__main">
+                <%- post.excerpt %>
+            </div>
         </div>
         <footer class="mt-article__footer">
             <% if (theme.excerpt_link){ %>

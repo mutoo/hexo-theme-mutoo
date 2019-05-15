@@ -85,6 +85,75 @@ $color-border-light: #eee;
 .mt-article__body {
 }
 
+.mt-article__front-matter {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.mt-article__license {
+    flex: 0 0 auto;
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 2.0rem;
+}
+
+.mt-article__tag-list {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.mt-article__tag-list-item {
+    margin-right: calc(1em + 0.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.mt-article__tag-list-link {
+    position: relative;
+    display: inline-block;
+
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #fff4b1;
+
+    font-family: $font-monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #634500;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right: -1em;
+        width: 0;
+        border: 1em solid transparent;
+        border-right: none;
+        border-left-color: #fff4b1;
+    }
+}
+
+.article__main {
+    // A new micro clearfix hack
+    // https://link.zhihu.com/?target=http%3A//nicolasgallagher.com/micro-clearfix-hack/
+    &::before {
+        content: '';
+        display: table;
+    }
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
 .mt-article__footer {
     display: flex;
     justify-content: center;
@@ -93,6 +162,14 @@ $color-border-light: #eee;
 
     @include mq($from: tablet) {
         padding-top: 3rem;
+    }
+
+    .mt-article--post & {
+        margin-bottom: 2rem;
+
+        @include mq($from: tablet) {
+            margin-bottom: 0;
+        }
     }
 }
 

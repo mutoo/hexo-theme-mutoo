@@ -6,5 +6,9 @@ menu:
     About: /about/
 
 footer:
-    Categories: /categories/
-    Archives: /archives/
+    - label: Categories
+      link: /categories/
+      icon: list
+    - label: Archives
+      link: /archives/
+      icon: archive

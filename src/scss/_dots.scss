@@ -1,0 +1,56 @@
+.mt-dot-nav {
+    display: none;
+
+    @include mq($from: tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 1rem;
+        opacity: 0;
+
+        transition: opacity ease 0.3s;
+    }
+
+    @include mq($from: desktop) {
+        right: calc(50% - #{$width-article-max} / 2 - 10rem);
+    }
+
+    &:hover {
+        opacity: 1 !important;
+    }
+
+    a {
+        display: block;
+        border-radius: 50%;
+        transition: all ease 0.3s;
+        opacity: 0;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            margin: 1rem;
+            border-radius: 50%;
+            transition: all ease 0.3s;
+            background-color: black;
+            box-shadow: 0 0 0 0 rgba(black, 0);
+        }
+
+        &:focus,
+        &:hover {
+            opacity: 0.5 !important;
+
+            &::after {
+                margin: 0;
+                width: 4rem;
+                height: 4rem;
+                box-shadow: 0.5rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}

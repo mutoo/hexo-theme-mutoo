@@ -1,0 +1,17 @@
+<div class="mt-article__front-matter">
+    <a class="mt-article__license" href="https://creativecommons.org/licenses/by/4.0/"
+       title="Attribution 4.0 International (CC BY 4.0)" target="_blank">
+        <svg class="icon">
+            <use xlink:href="#icon-cc"></use>
+        </svg>
+        <svg class="icon">
+            <use xlink:href="#icon-by"></use>
+        </svg>
+    </a>
+    <% if (post.tags && post.tags.length){ %>
+        <%- list_tags(post.tags, {
+            show_count: false,
+            class: 'mt-article__tag'
+        }) %>
+    <% } %>
+</div>

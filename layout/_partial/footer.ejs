@@ -13,13 +13,16 @@
     </div>
     <div class="mt-footer__right">
         <nav class="mt-footer__menu">
-            <% for (var item in theme.footer){ %>
+            <% theme.footer.forEach((item)=>{ %>
             <p>
-                <a class="mt-footer__link" href="<%- url_for(theme.footer[item]) %>">
-                    <%= item %>
+                <a class="mt-footer__link" href="<%- url_for(item.link) %>">
+                    <%= item.label %>
+                    <svg class="icon">
+                        <use xlink:href="#icon-<%= item.icon %>"></use>
+                    </svg>
                 </a>
             </p>
-            <% } %>
+            <% }); %>
         </nav>
     </div>
 </footer>
