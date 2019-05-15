@@ -1,7 +1,12 @@
-<%- partial('_partial/header-mini') %>
-<section class="mt-categories">
-    <h1>Categories</h1>
-    <div>
-        <%- list_categories() %>
+<article class="mt-article  mt-typography">
+    <header class="mt-article__header">
+        <h1>Categories</h1>
+    </header>
+    <div class="mt-article__body">
+        <div class="mt-article__main">
+            <%- list_categories({
+                class: 'mt-cagetory',
+            }) %>
+        </div>
     </div>
-</section>
+</article>

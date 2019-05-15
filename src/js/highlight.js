@@ -19,7 +19,6 @@ import scss from 'highlight.js/lib/languages/scss';
 import tex from 'highlight.js/lib/languages/tex';
 import xml from 'highlight.js/lib/languages/xml';
 import yaml from 'highlight.js/lib/languages/yaml';
-import plain from 'highlight.js/lib/languages/plaintext';
 
 hljs.registerLanguage('apache', apache);
 hljs.registerLanguage('apacheconfig', apache);

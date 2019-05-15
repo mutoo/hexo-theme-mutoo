@@ -1,5 +1,6 @@
 $(() => {
     let $dotNav = $('.mt-dot-nav');
+    if (!$dotNav.length) return;
 
     // bind articles to dots
     $dotNav.find('a').each((idx, el) => {

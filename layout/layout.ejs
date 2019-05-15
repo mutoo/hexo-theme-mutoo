@@ -36,8 +36,16 @@
     <% } %>
     <%- css('assets/style') %>
 </head>
-<body class="mt-body">
+<% let bodyClass;
+if(is_home()) bodyClass='mt-body--home';
+else if(is_archive()) bodyClass='mt-body--archive';
+else if(is_post()) bodyClass='mt-body--post';
+else if(is_page()) bodyClass='mt-body--page';
+else if(is_tag()) bodyClass='mt-body--tag';
+else if(is_category()) bodyClass='mt-body--category'; %>
+<body class="mt-body <%= bodyClass %>">
 <div class="mt-blog">
+    <%- partial('_partial/header') %>
     <%- body %>
     <%- partial('_partial/footer') %>
 </div>

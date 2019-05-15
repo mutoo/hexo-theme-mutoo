@@ -16,11 +16,16 @@
 }
 
 .footnote-ref {
-    font-family: $font-monospace;
-    background-color: rgba(246, 216, 64, 0.58);
-    color: #5c220c;
-    border-radius: 0.3rem;
-    margin-left: 0.3rem;
+    margin-top: -6em;
+    padding-top: 6em;
+
+    a {
+        font-family: $font-monospace;
+        background-color: rgba(246, 216, 64, 0.58);
+        color: #5c220c;
+        border-radius: 0.3rem;
+        margin-left: 0.3rem;
+    }
 
     // hide the footnote in the post list
     .mt-archives .mt-article:not(.mt-article--latest) & {
@@ -32,5 +37,25 @@
     // hide the footnote in the post list
     .mt-archives .mt-article:not(.mt-article--latest) & {
         display: none;
+    }
+}
+
+.footnotes-sep {
+    margin: 3rem auto;
+    border: none;
+    border-bottom: 0.1rem dashed #666;
+    width: 20rem;
+}
+
+.footnote-item {
+    margin-top: -6em;
+    padding-top: 6em;
+
+    p {
+        text-indent: 0;
+
+        a {
+            word-break: break-word;
+        }
     }
 }

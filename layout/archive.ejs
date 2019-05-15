@@ -1,4 +1,3 @@
-<%- partial('_partial/header-index') %>
 <%- partial('_partial/dots') %>
 <div class="mt-archives  mt-archives--title-only">
     <%
@@ -13,7 +12,7 @@
     <% }
 
         lastPost = post; %>
-    <%- partial('_partial/article', {post: post, full: false, articleClass: 'mt-article--archive'}) %>
+    <%- partial('_partial/article', {post: post, full: false}) %>
     <% }); %>
 </div>
 <%- partial('_partial/pagination') %>

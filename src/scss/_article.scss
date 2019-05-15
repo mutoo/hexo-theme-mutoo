@@ -129,7 +129,7 @@ $color-border-light: #eee;
     &::after {
         content: '';
         position: absolute;
-        top:0;
+        top: 0;
         bottom: 0;
         right: -1em;
         width: 0;
@@ -139,7 +139,7 @@ $color-border-light: #eee;
     }
 }
 
-.article__main {
+.mt-article__main {
     // A new micro clearfix hack
     // https://link.zhihu.com/?target=http%3A//nicolasgallagher.com/micro-clearfix-hack/
     &::before {
@@ -164,7 +164,8 @@ $color-border-light: #eee;
         padding-top: 3rem;
     }
 
-    .mt-article--post & {
+    .mt-body--post &,
+    .mt-body--page & {
         margin-bottom: 2rem;
 
         @include mq($from: tablet) {
