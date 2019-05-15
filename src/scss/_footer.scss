@@ -1,5 +1,5 @@
 .mt-footer {
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     max-width: $width-article-max;
     display: flex;
     justify-content: space-between;
@@ -8,8 +8,9 @@
     font-size: 1.6rem;
 
     @include mq($from: tablet) {
-        font-size: 1.8rem;
+        margin-bottom: 4rem;
         padding: 0 4rem;
+        font-size: 1.8rem;
     }
 
     .icon {
