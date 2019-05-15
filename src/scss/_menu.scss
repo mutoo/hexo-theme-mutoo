@@ -1,11 +1,31 @@
 .mt-menu {
     font-family: $font-monospace;
     font-size: 1.8rem;
+
+    @include mq($until: tablet) {
+        display: flex;
+        flex-direction: column;
+        padding: 2.0rem;
+    }
 }
 
 .mt-menu__link {
+    display: inline-block;
     padding: 0.5rem 0.8rem;
     border-radius: 0.3rem;
+
+    @include mq($until: tablet) {
+        padding: 2rem;
+        border-top: 0.2rem solid #eee;
+        font-size: 3rem;
+        font-family: $font-sans-serif;
+        text-align: left;
+
+        &:hover {
+            background-color: #333;
+            color: #eee
+        }
+    }
 
     &.active {
         background-color: black;

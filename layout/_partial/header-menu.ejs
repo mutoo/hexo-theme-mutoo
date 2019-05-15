@@ -1,7 +1,12 @@
 <div class="mt-header__menu">
-    <div class="mt-header__menu-toggle">
-        <img src="//placehold.it/40x40" alt="">
-    </div>
+    <a class="mt-header__menu-toggle" role="button" href="#">
+        <svg class="icon icon-bars" role="presentation">
+            <use xlink:href="#icon-bars"></use>
+        </svg>
+        <svg class="icon icon-times" role="presentation">
+            <use xlink:href="#icon-times"></use>
+        </svg>
+    </a>
     <div class="mt-header__menu-wrap">
         <div class="mt-menu">
             <% for (var item in theme.menu){

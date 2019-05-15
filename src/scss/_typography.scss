@@ -5,6 +5,7 @@
 
     max-width: $width-article-max;
     margin: 0 auto;
+
     font-family: $font-sans-serif;
     font-size: $base-mobile;
     line-height: 1.5;
@@ -15,6 +16,7 @@
     }
 
     h1, h2, h3, h4, h5, h6 {
+        font-family: $font-sans-serif;
         margin: 0 0 0.5em;
         font-weight: bold;
         color: #000;
@@ -116,7 +118,6 @@
         padding: 0.1rem 0.4rem;
         background-color: #404f5a;
         border-radius: 0.3rem;
-        vertical-align: text-bottom;
         font-size: 1.2rem;
         color: white;
 
@@ -124,4 +125,8 @@
             font-size: 1.4rem;
         }
     }
+}
+
+.mt-typography--serif {
+    font-family: $font-serif;
 }

@@ -1,4 +1,6 @@
-<article class="mt-article  mt-typography <%= articleClass %>" id="<%= post.slug %>">
+<% let typographyClass = post.typography?`mt-typography--${post.typography}`:'' %>
+<article class="mt-article <%= articleClass %> mt-typography <%= typographyClass %>"
+         id="<%= post.slug %>">
     <header class="mt-article__header">
         <div class="mt-article__metas">
             <span class="mt-article__date">
