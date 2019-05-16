@@ -1,3 +1,9 @@
+<% if(page.unsplash) {
+    let unsplash = `https://source.unsplash.com/${page.unsplash}/1440x600`; %>
+<div class="mt-unsplash">
+    <figure style="background-image: url(<%= unsplash %>)"></figure>
+</div>
+<% } %>
 <%
 let articleClass = post.isLatest ? 'mt-article--latest' : '';
 let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''; %>

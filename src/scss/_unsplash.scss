@@ -1,0 +1,34 @@
+.mt-unsplash {
+
+    margin: 0 -2rem 2rem;
+    width: calc(100% + 4rem);
+
+    @include mq($from: tablet) {
+        margin: 0 auto -4rem;
+        max-width: 96rem;
+        width: 100%;
+    }
+
+    @include mq($from: desktop) {
+        margin-bottom: -10rem;
+
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #ddd;
+        background-size: cover;
+        height: 20rem;
+
+        @include mq($from: tablet) {
+            height: 30rem;
+            border-radius: 1rem;
+        }
+
+        @include mq($from: desktop) {
+            height: 45rem;
+        }
+    }
+}

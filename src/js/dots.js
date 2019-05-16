@@ -7,6 +7,12 @@ $(() => {
         let $dot = $(el);
         let target = $dot.attr('href');
         $(`.mt-article${target}`).data('dot', $dot);
+        $dot.on('focus', (e) => {
+            $dotNav.css('opacity', 1);
+        });
+        $dot.on('blur', (e) => {
+            $dotNav.css('opacity', 0);
+        });
     });
 
     // update dots opacity when scrolling
