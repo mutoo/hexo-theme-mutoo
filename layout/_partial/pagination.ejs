@@ -3,9 +3,19 @@
         <%
             const prev_text = "&laquo; " + __('prev');
             const next_text = __('next') + " &raquo;" %>
-        <%- paginator({
-            prev_text,
-            next_text
-        }) %>
+        <% if (is_home()) { %>
+            <%- paginator({
+                prev_text,
+                next_text,
+                mid_size: 0,
+                end_size: 0,
+                space: false
+            }) %>
+        <% } else { %>
+            <%- paginator({
+                prev_text,
+                next_text
+            }) %>
+        <% } %>
     </nav>
 <% } %>

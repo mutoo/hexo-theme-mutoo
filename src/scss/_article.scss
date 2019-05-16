@@ -90,14 +90,15 @@ $color-border-light: #eee;
     margin-bottom: 3rem;
 }
 
-.mt-article__license {
+a.mt-article__license {
     flex: 0 0 auto;
     display: inline-block;
     margin-right: 1rem;
     font-size: 2.0rem;
+    text-decoration: none;
 }
 
-.mt-article__tag-list {
+ul.mt-article__tag-list {
     flex: 1 1 auto;
     margin: 0;
     padding: 0;
@@ -107,12 +108,12 @@ $color-border-light: #eee;
     justify-content: flex-start;
 }
 
-.mt-article__tag-list-item {
+li.mt-article__tag-list-item {
     margin-right: calc(1em + 0.5rem);
     margin-bottom: 0.5rem;
 }
 
-.mt-article__tag-list-link {
+a.mt-article__tag-list-link {
     position: relative;
     display: inline-block;
 
@@ -124,6 +125,7 @@ $color-border-light: #eee;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
     color: #634500;
 
     &::after {

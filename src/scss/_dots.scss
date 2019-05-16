@@ -16,7 +16,7 @@
     }
 
     @include mq($from: desktop) {
-        right: calc(50% - #{$width-article-max} / 2 - 10rem);
+        left: calc(50% + #{$width-article-max} / 2 + 10rem);
     }
 
     &:hover {

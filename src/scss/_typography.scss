@@ -90,6 +90,49 @@
         text-indent: 2em;
     }
 
+    ul, ol {
+        margin: 0 0 1em;
+        padding-left: 2em;
+    }
+
+    li {
+        > p:first-child {
+            text-indent: 0;
+        }
+    }
+
+    blockquote {
+        position: relative;
+        margin: 0 0 1em;
+        padding: 1em 2em;
+        color: #666;
+        font-size: 1.2em;
+        font-family: $font-serif;
+
+        &::before, &::after {
+            font-family: $font-monospace;
+            font-size: 2em;
+            display: block;
+            text-align: center;
+        }
+
+        &::before {
+            content: '/*';
+        }
+
+        &::after {
+            content: '*/';
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            word-break: break-all;
+        }
+    }
+
     img {
         display: block;
         max-width: 100%;
@@ -97,10 +140,16 @@
         border-radius: 0.5rem;
     }
 
+    a {
+        text-decoration: underline;
+        text-decoration-color: #aaa;
+    }
+
     pre, code {
         font-family: $font-monospace;
     }
 
+    li code,
     p code {
         margin-top: -0.1rem;
         padding: 0.1rem 0.4rem;
@@ -114,8 +163,33 @@
         }
     }
 
-    pre code {
-        font-size: 1.4rem;
+    pre {
+        margin-bottom: 2em;
+
+        code {
+            font-size: 1.4rem;
+        }
+    }
+
+    iframe {
+        margin-bottom: 2em;
+
+        @include mq($until: tablet) {
+            margin-left: -2rem;
+            width: calc(100% + 4rem) !important;
+        }
+
+        @include mq($from: tablet) {
+            margin-left: -3rem;
+            width: calc(100% + 6rem) !important;
+        }
+    }
+
+    hr {
+        margin: 3rem auto;
+        border: none;
+        border-bottom: 0.1rem dashed #666;
+        width: 20rem;
     }
 }
 

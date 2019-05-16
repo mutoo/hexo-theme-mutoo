@@ -1,3 +1,7 @@
+// jquery plugins
+import 'magnific-popup';
+
+// site scripts
 import './svg/load';
 import './js/dots';
 import './js/menu';

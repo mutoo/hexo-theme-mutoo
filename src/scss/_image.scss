@@ -1,0 +1,43 @@
+@import "~magnific-popup/src/css/main";
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+p.mt-img {
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+p.mt-img--full-width {
+    @include mq($until: tablet) {
+        margin-left: -2rem;
+        width: calc(100% + 4rem);
+    }
+
+    @include mq($from: tablet) {
+        margin-left: -3rem;
+        width: calc(100% + 6rem);
+    }
+}
+
+a.mt-img__link {
+}
