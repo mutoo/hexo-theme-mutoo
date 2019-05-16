@@ -9,10 +9,10 @@
                 &lt;!--<%= post.date.year() %>--&gt;
             </a>
         </div>
-    <% }
-
-        lastPost = post; %>
+    <% } %>
     <%- partial('_partial/article', {post: post, full: false}) %>
-    <% }); %>
+    <%
+        lastPost = post;
+    }); %>
 </div>
 <%- partial('_partial/pagination') %>

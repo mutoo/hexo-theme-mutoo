@@ -11,9 +11,11 @@
         </div>
     <% }
 
-        post.isLatest = is_home() && !page.prev && idx === 0
-        lastPost = post; %>
+        post.isLatest = is_home() && !page.prev && idx === 0; %>
     <%- partial('_partial/article', {post: post, full: post.isLatest}) %>
-    <% }); %>
+    <%
+        page.mathjax |= post.mathjax;
+        lastPost = post;
+    }); %>
 </div>
 <%- partial('_partial/pagination') %>
