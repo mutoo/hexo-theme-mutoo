@@ -12,7 +12,7 @@
         left: calc(50% + #{$width-article-max} / 2 + 3rem);
         opacity: 0;
 
-        transition: opacity ease 0.3s;
+        transition: opacity ease 0.6s;
     }
 
     @include mq($from: desktop) {

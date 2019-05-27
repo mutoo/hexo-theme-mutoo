@@ -1,32 +1,23 @@
 $color-border-light: #eee;
 
 .mt-article {
-    background-color: white;
+    margin-bottom: 4rem;
 
     @include mq($from: tablet) {
-        padding: 3rem;
+        margin-bottom: 5rem;
     }
+}
 
-    @include mq($from: desktop) {
-        padding: 4rem;
-    }
+.mt-article__container {
+    background-color: white;
+    max-width: $width-article-max;
 
-    & + & {
-        margin-top: 4rem;
-    }
-
-    .mt-archives--title-only & + & {
-        margin-top: 2rem;
-
-        @include mq($from: tablet) {
-            margin-top: 0;
-        }
-    }
-
-    .mt-unsplash + & {
+    .mt-unsplash + .mt-article & {
         position: relative;
 
         @include mq($from: tablet) {
+            padding-top: 3rem;
+
             &::before,
             &::after {
                 content: '';
@@ -98,9 +89,7 @@ a.mt-article__category-link {
 }
 
 .mt-article__title {
-    .mt-article & {
-        margin-bottom: 0;
-    }
+    margin: 0 !important;
 
     a {
         text-decoration: underline;
@@ -173,18 +162,7 @@ a.mt-article__tag-list-link {
 }
 
 .mt-article__main {
-    // A new micro clearfix hack
-    // https://link.zhihu.com/?target=http%3A//nicolasgallagher.com/micro-clearfix-hack/
-    &::before {
-        content: '';
-        display: table;
-    }
-
-    &::after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+    @include clear-fix;
 }
 
 .mt-article__footer {

@@ -19,6 +19,7 @@ $(() => {
     let $articles = $('.mt-article');
     let minAlpha = parseFloat($dotNav.data('min-alpha'));
     let maxAlpha = parseFloat($dotNav.data('max-alpha'));
+    let fadeOutTimer;
     $(window).on('scroll', (e) => {
         let showScroll = false;
         $articles.each((idx, el) => {
@@ -30,5 +31,11 @@ $(() => {
         });
 
         $dotNav.css('opacity', showScroll ? 1 : 0);
+
+        // fade out when no scrolling
+        clearTimeout(fadeOutTimer);
+        fadeOutTimer = setTimeout(() => {
+            $dotNav.css('opacity', 0);
+        }, 500);
     });
 });

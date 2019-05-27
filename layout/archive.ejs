@@ -4,11 +4,7 @@
     let lastPost;
     page.posts.forEach((post, idx) => {
     if (!lastPost || lastPost && (lastPost.date.year() !== post.date.year())) { %>
-        <div class="mt-archives__year">
-            <a href="/archives/<%= post.date.year() %>/">
-                &lt;!--<%= post.date.year() %>--&gt;
-            </a>
-        </div>
+        <%- partial('_partial/year', {post}) %>
     <% } %>
     <%- partial('_partial/article', {post: post, full: false}) %>
     <%

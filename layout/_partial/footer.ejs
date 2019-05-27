@@ -1,28 +1,30 @@
 <footer class="mt-footer">
-    <div class="mt-footer__left">
-        <p class="mt-footer__copyright">
-            <svg class="icon">
-                <use xlink:href="#icon-copyright"></use>
-            </svg>
-            2010-<%= date(new Date(), 'YYYY') %>
-            <a href="//mutoo.im"><%= config.author || config.title %></a>
-        </p>
-        <p class="mt-footer__powered-by">
-            <%= __('powered_by') %> <a href="//hexo.io/" target="_blank">Hexo</a>
-        </p>
-    </div>
-    <div class="mt-footer__right">
-        <nav class="mt-footer__menu">
-            <% theme.footer.forEach((item)=>{ %>
-            <p>
-                <a class="mt-footer__link" href="<%- url_for(item.link) %>">
-                    <%= item.label %>
-                    <svg class="icon">
-                        <use xlink:href="#icon-<%= item.icon %>"></use>
-                    </svg>
-                </a>
+    <div class="mt-container  mt-footer__container">
+        <div class="mt-footer__left">
+            <p class="mt-footer__copyright">
+                <svg class="icon">
+                    <use xlink:href="#icon-copyright"></use>
+                </svg>
+                2010-<%= date(new Date(), 'YYYY') %>
+                <a href="//mutoo.im"><%= config.author || config.title %></a>
             </p>
-            <% }); %>
-        </nav>
+            <p class="mt-footer__powered-by">
+                <%= __('powered_by') %> <a href="//hexo.io/" target="_blank">Hexo</a>
+            </p>
+        </div>
+        <div class="mt-footer__right">
+            <nav class="mt-footer__menu">
+                <% theme.footer.forEach((item)=>{ %>
+                    <p>
+                        <a class="mt-footer__link" href="<%- url_for(item.link) %>">
+                            <%= item.label %>
+                            <svg class="icon">
+                                <use xlink:href="#icon-<%= item.icon %>"></use>
+                            </svg>
+                        </a>
+                    </p>
+                <% }); %>
+            </nav>
+        </div>
     </div>
 </footer>

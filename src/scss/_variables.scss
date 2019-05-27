@@ -1,15 +1,18 @@
 // MEDIA QUERY
 // -----------
-$width-article-max: 700px;
-$width-site-max: 1170px;
+$width-article-max: 660px;
+$width-site-max: 960px;
 $mq-breakpoints: (
     mobile: 320px,
-    article: $width-article-max,
+    article: $width-article-max, // article size
     tablet: 740px,
+    site-max: $width-site-max,
     desktop: 980px,
-    max: $width-site-max,
     wide: 1300px, // not in use
 );
+
+$gutter-mobile: 2rem;
+$gutter-tablet: 3rem;
 
 // FONTS
 // -----

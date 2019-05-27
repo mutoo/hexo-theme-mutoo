@@ -7,19 +7,23 @@
 }
 
 .mt-archives__year {
-    margin: 3rem auto 2rem;
+    margin-bottom: 2rem;
+
+    @include mq($from: tablet) {
+        margin-bottom: 3rem;
+    }
+}
+
+.mt-archives__year-container {
     max-width: $width-article-max;
+}
+
+.mt-archives__year-link {
     font-size: 2.0rem;
     font-family: $font-monospace;
     color: #666;
 
     @include mq($from: tablet) {
-        margin: 4rem auto 3rem;
-        padding: 0 4rem;
         font-size: 2.5rem;
-
-        &:first-child {
-            margin-bottom: 0;
-        }
     }
 }

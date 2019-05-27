@@ -1,20 +1,28 @@
 .mt-header {
     position: relative;
+    padding-top: 2rem;
     margin-bottom: 3rem;
     z-index: 1;
 
     @include mq($from: tablet) {
+        padding-top: 3rem;
         margin-bottom: 4rem;
     }
 }
 
-.mt-header__outer {
+.mt-header__container {
+    @include clear-fix;
+
     position: relative;
-    margin: 0 auto;
     max-width: $width-article-max;
+
+    @include mq($from: desktop) {
+        padding: 0;
+    }
 }
 
 .mt-header__title {
+    margin: 0 0 0.5em;
     font-family: $font-sans-serif;
     font-size: 2.0rem;
 
@@ -24,11 +32,16 @@
 }
 
 .mt-header__subtitle {
+    margin-top: 0;
     font-family: $font-monospace;
     font-size: 1.4rem;
 
     @include mq($from: tablet) {
         font-size: 1.8rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -40,18 +53,24 @@
     @include mq($from: tablet) {
         font-size: 1.8rem;
     }
+
+    .icon {
+        top: 0;
+    }
 }
 
 .mt-header__menu {
     position: absolute;
     top: 0;
-    right: 0;
+    right: $gutter-mobile;
 }
 
 .mt-header__menu-toggle {
+    $extend: 1.7rem;
+
     position: relative;
-    margin: -1.7rem -1.7rem 0 0;
-    padding: 1.7rem;
+    margin: -$extend -$extend 0 0;
+    padding: $extend;
     font-size: 2.3rem;
     border-radius: 50%;
     cursor: pointer;
@@ -84,8 +103,10 @@
 }
 
 .mt-header__menu-wrap {
+    $top: 9.9rem;
+
     display: none;
-    bottom: calc(100% - 10rem);
+    bottom: calc(100% - #{$top});
     background-color: white;
     transition: bottom ease 0.6s;
     overflow: hidden;
@@ -97,7 +118,7 @@
     .mt-body--menu-on & {
         display: block;
         position: fixed;
-        top: 10rem;
+        top: $top;
         left: 0;
         right: 0;
         bottom: 0;

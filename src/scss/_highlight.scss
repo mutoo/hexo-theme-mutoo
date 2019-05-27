@@ -9,13 +9,10 @@
 
 .language-plain,
 .hljs {
+    @include extend-width;
     padding: 2rem;
-    margin-left: -2rem;
-    width: calc(100% + 4rem);
 
     @include mq($from: tablet) {
-        margin-left: -3rem;
-        width: calc(100% + 6rem);
         padding: 2rem 3rem;
         border-radius: 0.5rem;
     }

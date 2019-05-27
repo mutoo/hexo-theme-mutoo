@@ -1,21 +1,22 @@
 .mt-footer {
-    margin: 0 auto 2rem;
-    max-width: $width-article-max;
-    display: flex;
-    justify-content: space-between;
-
+    margin-bottom: 2rem;
     font-family: $font-sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
     @include mq($from: tablet) {
         margin-bottom: 4rem;
-        padding: 0 4rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .icon {
         top: 0.1ex;
     }
+}
+
+.mt-footer__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: $width-article-max;
 }
 
 .mt-footer__left {

@@ -3,9 +3,6 @@
     $base-tablet: 1.6rem;
     $scale: 1.2;
 
-    max-width: $width-article-max;
-    margin: 0 auto;
-
     font-family: $font-sans-serif;
     font-size: $base-mobile;
     line-height: 1.5;
@@ -20,6 +17,10 @@
         margin: 0 0 0.5em;
         font-weight: bold;
         color: #000;
+
+        &:not(:first-child) {
+            margin-top: 1em;
+        }
 
         a {
             color: inherit;
@@ -172,17 +173,8 @@
     }
 
     iframe {
+        @include extend-width;
         margin-bottom: 2em;
-
-        @include mq($until: tablet) {
-            margin-left: -2rem;
-            width: calc(100% + 4rem) !important;
-        }
-
-        @include mq($from: tablet) {
-            margin-left: -3rem;
-            width: calc(100% + 6rem) !important;
-        }
     }
 
     hr {

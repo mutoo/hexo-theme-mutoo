@@ -1,1 +1,26 @@
 @import "~sass-mq";
+
+@mixin clear-fix {
+    // A new micro clearfix hack
+    // https://link.zhihu.com/?target=http%3A//nicolasgallagher.com/micro-clearfix-hack/
+    &::before {
+        content: '';
+        display: table;
+    }
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin extend-width {
+    margin-left: -$gutter-mobile;
+    width: calc(100% + 2 * #{$gutter-mobile}) !important;
+
+    @include mq($from: tablet) {
+        margin-left: -$gutter-tablet;
+        width: calc(100% + 2 * #{$gutter-tablet}) !important;
+    }
+}

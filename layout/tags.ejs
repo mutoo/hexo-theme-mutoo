@@ -1,20 +1,21 @@
 <article class="mt-article  mt-typography">
-    <header class="mt-article__header">
-        <h1>Tag Cloud</h1>
-    </header>
-    <div class="mt-article__body">
-        <div class="mt-article__main">
-            <div class="mt-tag-cloud">
-                <%- tagcloud({
-                    min_font: 1,
-                    max_font: 3,
-                    unit: 'em',
-                    color: true,
-                    start_color: '#999999',
-                    end_color: '#000000'
-                }) %>
+    <div class="mt-container  mt-article__container">
+        <header class="mt-article__header">
+            <h1>Tag Cloud</h1>
+        </header>
+        <div class="mt-article__body">
+            <div class="mt-article__main">
+                <div class="mt-tag-cloud">
+                    <%- tagcloud({
+                        min_font: 1,
+                        max_font: 3,
+                        unit: 'em',
+                        color: true,
+                        start_color: '#999999',
+                        end_color: '#000000'
+                    }) %>
+                </div>
             </div>
         </div>
     </div>
 </article>
-<%- partial('_partial/comment') %>

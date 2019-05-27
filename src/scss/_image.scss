@@ -28,15 +28,7 @@ p.mt-img {
 }
 
 p.mt-img--full-width {
-    @include mq($until: tablet) {
-        margin-left: -2rem;
-        width: calc(100% + 4rem);
-    }
-
-    @include mq($from: tablet) {
-        margin-left: -3rem;
-        width: calc(100% + 6rem);
-    }
+    @include extend-width;
 }
 
 a.mt-img__link {

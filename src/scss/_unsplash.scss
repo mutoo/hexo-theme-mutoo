@@ -1,34 +1,36 @@
 .mt-unsplash {
-
-    margin: 0 -2rem 2rem;
-    width: calc(100% + 4rem);
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: $width-site-max;
 
     @include mq($from: tablet) {
-        margin: 0 auto -4rem;
-        max-width: 96rem;
-        width: 100%;
+        margin-bottom: -8rem;
+    }
+
+    @include mq($from: site-max) {
+        margin: 0 auto -10rem;
     }
 
     @include mq($from: desktop) {
-        margin-bottom: -10rem;
-
+        margin-bottom: -12rem;
     }
 
     figure {
         margin: 0;
         padding: 0;
         width: 100%;
-        background-color: #ddd;
         background-size: cover;
-        height: 20rem;
+        background-position: center;
+        background-color: #ddd;
 
-        @include mq($from: tablet) {
-            height: 30rem;
+        @include mq($from: site-max) {
             border-radius: 1rem;
         }
 
-        @include mq($from: desktop) {
-            height: 45rem;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%;
         }
     }
 }
