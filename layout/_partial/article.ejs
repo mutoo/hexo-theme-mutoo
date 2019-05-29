@@ -1,7 +1,9 @@
-<% if(page.unsplash) {
-    let unsplash = `https://source.unsplash.com/${page.unsplash}/1440x600`; %>
+<%
+let unsplashId = page.unsplash || (is_home() && post.isLatest && post.unsplash);
+if(unsplashId) {
+    let unsplashUrl = `https://source.unsplash.com/${unsplashId}/1440x600`; %>
 <div class="mt-unsplash">
-    <figure style="background-image: url(<%= unsplash %>)"></figure>
+    <figure style="background-image: url(<%= unsplashUrl %>)"></figure>
 </div>
 <% } %>
 <%
@@ -32,7 +34,11 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                 </span>
             </div>
             <h1 class="mt-article__title">
-                <a href="<%= url_for(post.path) %>"><%- post.title %></a>
+                <% if(is_post() || is_page()) { %>
+                    <%- post.title %>
+                <% } else { %>
+                    <a href="<%= url_for(post.path) %>"><%- post.title %></a>
+                <% } %>
             </h1>
         </header>
         <% if(full){ %>
@@ -74,4 +80,3 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
         <% } %>
     </div>
 </article>
-

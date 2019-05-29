@@ -24,7 +24,7 @@
         background-color: #ddd;
 
         @include mq($from: site-max) {
-            border-radius: 1rem;
+            border-radius: $border-radius-large;
         }
 
         &::before {

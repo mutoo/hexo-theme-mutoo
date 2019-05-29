@@ -23,4 +23,9 @@
         margin-left: -$gutter-tablet;
         width: calc(100% + 2 * #{$gutter-tablet}) !important;
     }
+
+    @include mq($from: desktop) {
+        margin-left: -$gutter-desktop;
+        width: calc(100% + 2 * #{$gutter-desktop}) !important;
+    }
 }

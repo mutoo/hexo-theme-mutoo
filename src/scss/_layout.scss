@@ -11,4 +11,8 @@
         padding: 0 $gutter-tablet;
         max-width: $width-site-max;
     }
+
+    @include mq($from: desktop) {
+        padding: 0 $gutter-desktop;
+    }
 }

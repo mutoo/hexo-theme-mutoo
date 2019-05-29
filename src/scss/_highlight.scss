@@ -10,11 +10,19 @@
 .language-plain,
 .hljs {
     @include extend-width;
-    padding: 2rem;
+
+    // add extra padding to make it looks better
+    $gutter-extra: 0.3rem;
+
+    padding: 2rem $gutter-mobile + $gutter-extra;
 
     @include mq($from: tablet) {
-        padding: 2rem 3rem;
-        border-radius: 0.5rem;
+        padding: 2rem $gutter-tablet + $gutter-extra;
+        border-radius: $border-radius;
+    }
+
+    @include mq($from: desktop) {
+        padding: 2rem $gutter-desktop + $gutter-extra;
     }
 }
 

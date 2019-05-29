@@ -8,9 +8,9 @@
 }
 
 .mt-info {
-    border-radius: 0.5rem;
+    border-radius: $border-radius;
     border-left: 0.4rem solid #31b8cc;
-    padding: 1rem calc(2em - 0.5rem);
+    padding: 1rem calc(2em - #{$border-radius});
     margin-bottom: 1em;
     background-color: #eee;
 }
@@ -23,8 +23,8 @@
         font-family: $font-monospace;
         background-color: rgba(246, 216, 64, 0.58);
         color: #5c220c;
-        border-radius: 0.3rem;
-        margin-left: 0.3rem;
+        border-radius: $border-radius-small;
+        margin-left: $border-radius-small;
     }
 
     // hide the footnote in the post list

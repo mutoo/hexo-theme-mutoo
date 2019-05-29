@@ -59,18 +59,17 @@
     }
 }
 
+$menu-extend: 1.7rem;
 .mt-header__menu {
     position: absolute;
     top: 0;
-    right: $gutter-mobile;
+    right: calc(#{$gutter-mobile} - #{$menu-extend});
 }
 
 .mt-header__menu-toggle {
-    $extend: 1.7rem;
-
     position: relative;
-    margin: -$extend -$extend 0 0;
-    padding: $extend;
+    margin: -$menu-extend -$menu-extend 0 0;
+    padding: $menu-extend;
     font-size: 2.3rem;
     border-radius: 50%;
     cursor: pointer;

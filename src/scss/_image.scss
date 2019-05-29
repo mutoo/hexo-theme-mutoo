@@ -11,6 +11,7 @@
 .mfp-with-zoom.mfp-ready .mfp-container {
     opacity: 1;
 }
+
 .mfp-with-zoom.mfp-ready.mfp-bg {
     opacity: 0.8;
 }
@@ -32,4 +33,6 @@ p.mt-img--full-width {
 }
 
 a.mt-img__link {
+    display: block;
+    margin-bottom: 0.5em;
 }

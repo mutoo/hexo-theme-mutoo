@@ -1,6 +1,6 @@
 // MEDIA QUERY
 // -----------
-$width-article-max: 660px;
+$width-article-max: 680px;
 $width-site-max: 960px;
 $mq-breakpoints: (
     mobile: 320px,
@@ -13,6 +13,11 @@ $mq-breakpoints: (
 
 $gutter-mobile: 2rem;
 $gutter-tablet: 3rem;
+$gutter-desktop: 4rem;
+
+$border-radius-small: 0.3rem;
+$border-radius: 0.5rem;
+$border-radius-large: 1rem;
 
 // FONTS
 // -----

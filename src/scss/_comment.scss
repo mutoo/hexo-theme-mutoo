@@ -1,6 +1,8 @@
 .mt-comments {
+    margin-bottom: 4rem;
+
     @include mq($from: tablet) {
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
     }
 }
 

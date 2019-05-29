@@ -1,0 +1,24 @@
+<% if (page.prev || page.next){ %>
+    <nav class="mt-article__nav">
+        <div class="mt-container  mt-article__nav-container">
+            <% function pageLink(tag, link, linkClass) {
+            if (link){ %>
+                <a class="mt-article__nav-link  mt-article__nav-link--<%= linkClass %>"
+                   href="<%- url_for(link.path) %>">
+                    <b><%= tag %></b>
+                    <span>
+                        <% if (link.title){ %>
+                            <%= link.title %>
+                        <% } else { %>
+                            (no title)
+                        <% } %>
+                    </span>
+                </a>
+            <% }
+            }
+                pageLink(__('newer'), page.prev, 'newer');
+                pageLink(__('older'), page.next, 'older');
+            %>
+        </div>
+    </nav>
+<% } %>
