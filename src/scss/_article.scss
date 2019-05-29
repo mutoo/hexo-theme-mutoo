@@ -197,5 +197,9 @@ a.mt-article__footer-action {
         color: #eee;
         background-color: #333;
     }
+
+    & + & {
+        margin-left: 1em;
+    }
 }
 

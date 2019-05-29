@@ -11,6 +11,13 @@
     .icon {
         top: 0.1ex;
     }
+
+    .mt-share + & {
+        // makes room for share button on mobile
+        @include mq($until: tablet) {
+            padding-bottom: 5rem;
+        }
+    }
 }
 
 .mt-footer__container {

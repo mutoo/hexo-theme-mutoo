@@ -149,6 +149,10 @@
 
     pre, code {
         font-family: $font-monospace;
+
+        a {
+            word-break: break-word;
+        }
     }
 
     li code,

@@ -7,12 +7,29 @@
     overflow-x: auto;
 }
 
-.mt-info {
+.mt-info,
+.mt-warning {
     border-radius: $border-radius;
-    border-left: 0.4rem solid #31b8cc;
+    border-left: 0.4rem solid #666;
     padding: 1rem calc(2em - #{$border-radius});
     margin-bottom: 1em;
     background-color: #eee;
+}
+
+.mt-info {
+    border-left-color: #31b8cc;
+}
+
+.mt-warning {
+    border-left-color: #eec20a;
+}
+
+.mt-success {
+    border-left-color: #52ee45;
+}
+
+.mt-error {
+    border-left-color: #ee284e;
 }
 
 .footnote-ref {
