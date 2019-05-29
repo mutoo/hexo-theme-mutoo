@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.babel.js --env development --watch",
-    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.babel.js --env production --json > stats.json"
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.babel.js --env production --json > source/assets/stats.json"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
