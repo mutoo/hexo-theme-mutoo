@@ -2,9 +2,10 @@
 
 .language-plain {
     display: block;
-    background: #23241f;
+    background: $color-heavy-metal;
     color: white;
-    white-space: pre-wrap;
+    white-space: pre;
+    overflow-x: auto;
 }
 
 .language-plain,

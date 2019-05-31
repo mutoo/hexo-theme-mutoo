@@ -21,7 +21,7 @@
         width: 100%;
         background-size: cover;
         background-position: center;
-        background-color: #ddd;
+        background-color: $mt-color-unsplash-bg;
 
         @include mq($from: site-max) {
             border-radius: $border-radius-large;

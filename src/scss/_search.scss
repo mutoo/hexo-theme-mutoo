@@ -4,9 +4,8 @@
 }
 
 .mt-search__query {
-    border: 0.2rem solid #999;
-    border-radius: 1.5rem;
-    padding: 0.2rem 1rem 0.2rem;
+    border: 0.2rem solid $mt-color-search-border;
+
     font-size: 1.4rem;
 
     &::placeholder {
@@ -14,11 +13,14 @@
     }
 
     @include mq($until: tablet) {
-        margin-right: -3rem;
-        padding-right: 3rem;
+        margin-right: -4rem;
+        border-radius: 2rem;
+        padding: 1rem 4rem 1rem 2rem;
     }
 
     @include mq($from: tablet) {
+        border-radius: 1.5rem;
+        padding: 0.2rem 1rem;
         position: absolute;
         top: 0;
         right: 0;
@@ -30,7 +32,7 @@
         .mt-search--typed & {
             padding-right: 3rem;
             width: 100%;
-            color: #666;
+            color: $mt-color-search-query;
         }
 
         &::placeholder {
@@ -45,8 +47,10 @@
     height: 3rem;
     border: none;
     background-color: transparent;
-    color: #666;
+    color: $mt-color-search-action;
+    font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1;
 
     .icon {
         top: 0;

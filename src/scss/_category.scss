@@ -36,7 +36,7 @@
     text-transform: capitalize;
 
     &:hover {
-        background-color: #666;
+        background-color: $mt-color-category-list-bg;
         color: white;
     }
 }
@@ -49,7 +49,7 @@
     font-family: $font-serif;
 
     .mt-category-list-link:hover + & {
-        background-color: #666;
+        background-color: $mt-color-category-list-bg;
         color: white;
     }
 }

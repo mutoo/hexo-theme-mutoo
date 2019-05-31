@@ -8,28 +8,30 @@
 }
 
 .mt-info,
-.mt-warning {
+.mt-warning,
+.mt-success,
+.mt-error {
     border-radius: $border-radius;
-    border-left: 0.4rem solid #666;
+    border-left: 0.4rem solid $mt-color-note;
     padding: 1rem calc(2em - #{$border-radius});
     margin-bottom: 1em;
-    background-color: #eee;
+    background-color: $mt-color-note-bg;
 }
 
 .mt-info {
-    border-left-color: #31b8cc;
+    border-left-color: $mt-color-note-info;
 }
 
 .mt-warning {
-    border-left-color: #eec20a;
+    border-left-color: $mt-color-note-warning;
 }
 
 .mt-success {
-    border-left-color: #52ee45;
+    border-left-color: $mt-color-note-success;
 }
 
 .mt-error {
-    border-left-color: #ee284e;
+    border-left-color: $mt-color-note-error;
 }
 
 .footnote-ref {
@@ -38,10 +40,11 @@
 
     a {
         font-family: $font-monospace;
-        background-color: rgba(246, 216, 64, 0.58);
-        color: #5c220c;
+        color: $mt-color-footnote-ref;
+        background-color: $mt-color-footnote-ref-bg;
         border-radius: $border-radius-small;
         margin-left: $border-radius-small;
+        text-decoration: none;
     }
 
     // hide the footnote in the post list
@@ -67,9 +70,10 @@
 
     p {
         text-indent: 0;
+        word-break: break-word;
 
         a {
-            word-break: break-word;
+            text-decoration: none;
         }
     }
 }

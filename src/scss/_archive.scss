@@ -21,7 +21,7 @@
 .mt-archives__year-link {
     font-size: 2.0rem;
     font-family: $font-monospace;
-    color: #666;
+    color: $mt-color-filter;
 
     @include mq($from: tablet) {
         font-size: 2.5rem;

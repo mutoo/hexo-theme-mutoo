@@ -11,6 +11,9 @@ $mq-breakpoints: (
     wide: 1300px, // not in use
 );
 
+// SPACES
+// ------
+
 $gutter-mobile: 2rem;
 $gutter-tablet: 3rem;
 $gutter-desktop: 4rem;
@@ -18,6 +21,71 @@ $gutter-desktop: 4rem;
 $border-radius-small: 0.3rem;
 $border-radius: 0.5rem;
 $border-radius-large: 1rem;
+
+// COLORS
+// ------
+
+$color-mine-shaft-333:      #333333;
+$color-dove-gray-666:       #666666;
+$color-dust-gray-999:       #999999;
+$color-silver-chalice-aaa:  #AAAAAA;
+$color-silver-ccc:          #CCCCCC;
+$color-alto-ddd:            #DDDDDD;
+$color-gallery-eee:         #EEEEEE;
+$color-buttermilk:          #FFF4B1;
+$color-nutmeg-wood-finish:  #634500;
+$color-heavy-metal:         #23241f;
+$color-scooter:             #31B8CC;
+$color-corn:                #EEC20A;
+$color-scream-green:        #52EE45;
+$color-amaranth:            #EE284E;
+$color-minsk:               #413383;
+$color-river-bed:           #404F5A;
+
+$mt-color-meta:             $color-dust-gray-999;
+$mt-color-meta-icon:        $color-silver-ccc;
+
+$mt-color-border-light:     $color-gallery-eee;
+
+$mt-color-tag-bg:           $color-buttermilk;
+$mt-color-tag:              $color-nutmeg-wood-finish;
+
+$mt-color-footer-action:    $color-mine-shaft-333;
+$mt-color-footer-action-bg: $color-gallery-eee;
+
+$mt-color-category-list-bg: $color-dove-gray-666;
+$mt-color-highlight-bg:     $color-heavy-metal;
+$mt-color-img-caption:      $color-dove-gray-666;
+
+$mt-color-note:             $color-dove-gray-666;
+$mt-color-note-bg:          $color-gallery-eee;
+$mt-color-note-info:        $color-scooter;
+$mt-color-note-warning:     $color-corn;
+$mt-color-note-success:     $color-scream-green;
+$mt-color-note-error:       $color-amaranth;
+
+$mt-color-footnote-ref:     $color-nutmeg-wood-finish;
+$mt-color-footnote-ref-bg:  $color-buttermilk;
+
+$mt-color-menu-item-border: $color-mine-shaft-333;
+$mt-color-menu-item-hover:  $color-gallery-eee;
+
+$mt-color-nav-link:         $color-dove-gray-666;
+
+$mt-color-pagination:       $color-minsk;
+
+$mt-color-search-border:    $color-dust-gray-999;
+$mt-color-search-query:     $color-dove-gray-666;
+$mt-color-search-action:    $color-dove-gray-666;
+
+$mt-color-standard-text:    $color-mine-shaft-333;
+$mt-color-heading:          black;
+$mt-color-blockquote:       $color-dove-gray-666;
+$mt-color-link:             $color-silver-chalice-aaa;
+$mt-color-code:             $color-river-bed;
+$mt-color-hr:               $color-dove-gray-666;
+$mt-color-unsplash-bg:      $color-alto-ddd;
+$mt-color-filter:           $color-dove-gray-666;
 
 // FONTS
 // -----

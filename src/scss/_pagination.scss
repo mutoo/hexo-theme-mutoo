@@ -22,7 +22,7 @@
             height: $border-radius-small;
             width: 0;
             bottom: 0;
-            background-color: #0c1667;
+            background-color: $mt-color-pagination;
             transition: width ease-in-out 0.3s;
         }
 
@@ -71,7 +71,7 @@
             z-index: -1;
             display: block;
             border-radius: 50%;
-            background-color: #0c1667;
+            background-color: $mt-color-pagination;
             transform: scale(0);
             transition: transform ease-in-out 0.1s;
         }
@@ -87,7 +87,7 @@
 
         &.current {
             display: inline-flex;
-            background: linear-gradient(to bottom, #413383, #0c1667);
+            background: linear-gradient(to bottom, $mt-color-pagination, darken($mt-color-pagination,10%));
             color: white;
             cursor: default;
 

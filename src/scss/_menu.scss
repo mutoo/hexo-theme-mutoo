@@ -14,6 +14,9 @@
 .mt-menu__item {
     list-style: none;
 
+    @include mq($until: tablet) {
+        border-top: 0.1rem solid $mt-color-menu-item-border;
+    }
     @include mq($from: tablet) {
         margin-left: 1rem;
     }
@@ -21,7 +24,11 @@
 
 .mt-menu__item--search {
     @include mq($until: tablet) {
-        margin-top: 3rem;
+        padding: 2rem 0;
+    }
+
+    @include mq($from: tablet) {
+        margin-left: 2rem;
     }
 }
 
@@ -30,13 +37,13 @@
 
     @include mq($until: tablet) {
         padding: 2rem;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: $font-sans-serif;
-        text-align: left;
+        text-align: center;
 
         &:hover {
-            background-color: #333;
-            color: #eee
+            background-color: $mt-color-menu-item-border;
+            color: $mt-color-menu-item-hover
         }
     }
 

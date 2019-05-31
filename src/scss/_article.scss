@@ -1,4 +1,3 @@
-$color-border-light: #eee;
 
 .mt-article {
     margin-bottom: 4rem;
@@ -44,7 +43,7 @@ $color-border-light: #eee;
 
 .mt-article__header {
     padding-bottom: 0.5em;
-    border-bottom: 0.1rem dashed $color-border-light;
+    border-bottom: 0.1rem dashed $mt-color-border-light;
     margin-bottom: 1em;
 
     @include mq($from: tablet) {
@@ -61,10 +60,10 @@ $color-border-light: #eee;
 .mt-article__metas {
     font-family: $font-sans-serif;
     text-transform: uppercase;
-    color: #999;
+    color: $mt-color-meta;
 
     .icon {
-        color: #ccc;
+        color: $mt-color-meta-icon;
     }
 }
 
@@ -139,14 +138,14 @@ a.mt-article__tag-list-link {
 
     padding: 0.3rem 0.8rem;
     border-radius: $border-radius 0 0 $border-radius;
-    background-color: #fff4b1;
+    background-color: $mt-color-tag-bg;
 
     font-family: $font-monospace;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    color: #634500;
+    color: $mt-color-tag;
 
     &::after {
         content: '';
@@ -157,7 +156,7 @@ a.mt-article__tag-list-link {
         width: 0;
         border: 1em solid transparent;
         border-right: none;
-        border-left-color: #fff4b1;
+        border-left-color: $mt-color-tag-bg;
     }
 }
 
@@ -168,7 +167,7 @@ a.mt-article__tag-list-link {
 .mt-article__footer {
     display: flex;
     justify-content: center;
-    border-top: 0.1rem dashed $color-border-light;
+    border-top: 0.1rem dashed $mt-color-border-light;
     padding-top: 2rem;
 
     @include mq($from: tablet) {
@@ -188,14 +187,14 @@ a.mt-article__tag-list-link {
 a.mt-article__footer-action {
     padding: 0.5rem 1rem;
     border-radius: $border-radius-small;
-    background-color: #eee;
+    background-color: $mt-color-footer-action-bg;
     text-decoration: none;
-    color: #333;
+    color: $mt-color-footer-action;
     transition: all ease 0.3s;
 
     &:hover {
-        color: #eee;
-        background-color: #333;
+        color: $mt-color-footer-action-bg;
+        background-color: $mt-color-footer-action;
     }
 
     & + & {

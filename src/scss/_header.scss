@@ -107,7 +107,6 @@ $menu-extend: 1.7rem;
     display: none;
     bottom: calc(100% - #{$top});
     background-color: white;
-    transition: bottom ease 0.6s;
     overflow: hidden;
 
     @include mq($from: tablet) {

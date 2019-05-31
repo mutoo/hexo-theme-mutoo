@@ -6,7 +6,7 @@
     font-family: $font-sans-serif;
     font-size: $base-mobile;
     line-height: 1.5;
-    color: #333;
+    color: $mt-color-standard-text;
 
     @include mq($from: tablet) {
         font-size: $base-tablet;
@@ -16,7 +16,7 @@
         font-family: $font-sans-serif;
         margin: 0 0 0.5em;
         font-weight: bold;
-        color: #000;
+        color: $mt-color-heading;
 
         &:not(:first-child) {
             margin-top: 1em;
@@ -106,7 +106,7 @@
         position: relative;
         margin: 0 0 1em;
         padding: 1em 2em;
-        color: #666;
+        color: $mt-color-blockquote;
         font-size: 1.2em;
         font-family: $font-serif;
 
@@ -144,7 +144,7 @@
 
     a {
         text-decoration: underline;
-        text-decoration-color: #aaa;
+        text-decoration-color: $mt-color-link;
     }
 
     pre, code {
@@ -159,7 +159,7 @@
     p code {
         margin-top: -0.1rem;
         padding: 0.1rem 0.4rem;
-        background-color: #404f5a;
+        background-color: $mt-color-code;
         border-radius: $border-radius-small;
         font-size: 1.2rem;
         color: white;
@@ -185,7 +185,7 @@
     hr {
         margin: 3rem auto;
         border: none;
-        border-bottom: 0.1rem dashed #666;
+        border-bottom: 0.1rem dashed $mt-color-hr;
         width: 20rem;
     }
 }
