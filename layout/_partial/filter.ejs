@@ -1,0 +1,22 @@
+<% if(is_category()) { %>
+    <div class="mt-header__filter">
+        <svg class="icon">
+            <use xlink:href="#icon-filter"></use>
+        </svg>
+        Category: <%= page.category %>
+    </div>
+<% } else if(is_tag()) { %>
+    <div class="mt-header__filter">
+        <svg class="icon">
+            <use xlink:href="#icon-filter"></use>
+        </svg>
+        Tag: <%= page.tag %>
+    </div>
+<% } else if(is_year()) { %>
+    <div class="mt-header__filter">
+        <svg class="icon">
+            <use xlink:href="#icon-filter"></use>
+        </svg>
+        Year: <%= page.year %>
+    </div>
+<% } %>

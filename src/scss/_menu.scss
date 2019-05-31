@@ -1,22 +1,35 @@
 .mt-menu {
+    margin: 0;
+    padding: 0;
+    position: relative;
     font-family: $font-monospace;
     font-size: 1.8rem;
 
-    @include mq($until: tablet) {
+    @include mq($from: tablet) {
         display: flex;
-        flex-direction: column;
-        padding: 2.0rem;
+        flex-direction: row;
     }
 }
 
-.mt-menu__link {
-    display: inline-block;
-    padding: 0.5rem 0.8rem;
-    border-radius: $border-radius-small;
+.mt-menu__item {
+    list-style: none;
+
+    @include mq($from: tablet) {
+        margin-left: 1rem;
+    }
+}
+
+.mt-menu__item--search {
+    @include mq($until: tablet) {
+        margin-top: 3rem;
+    }
+}
+
+.mt-menu__item-link {
+    display: block;
 
     @include mq($until: tablet) {
         padding: 2rem;
-        border-top: 0.2rem solid #eee;
         font-size: 3rem;
         font-family: $font-sans-serif;
         text-align: left;
@@ -25,6 +38,11 @@
             background-color: #333;
             color: #eee
         }
+    }
+
+    @include mq($from: tablet) {
+        border-radius: $border-radius;
+        padding: 0.5rem 0.8rem;
     }
 
     &.active {

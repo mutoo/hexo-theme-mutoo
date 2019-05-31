@@ -1,25 +1,29 @@
+// Global
 @import "scss/variables";
 @import "scss/mixins";
 
+// Base
 @import "scss/base";
 @import "scss/icon";
 @import "scss/layout";
 @import "scss/typography";
 @import "scss/highlight";
+@import "scss/image";
 
+// Pages
 @import "scss/article";
 @import "scss/archive";
+@import "scss/tag";
+@import "scss/category";
 
+// Components
 @import "scss/unsplash";
 @import "scss/header";
 @import "scss/menu";
+@import "scss/search";
 @import "scss/dots";
 @import "scss/markdown";
 @import "scss/pagination";
 @import "scss/comment";
-@import "scss/footer";
-
-@import "scss/tag";
-@import "scss/image";
 @import "scss/nav";
-@import "scss/category";
+@import "scss/footer";

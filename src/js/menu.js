@@ -4,7 +4,7 @@ $(() => {
     let $body = $('body');
     let $window = $(window);
     let $headerMenu = $('.mt-header__menu');
-    let $links = $headerMenu.find('.mt-menu__link');
+    let $links = $headerMenu.find('.mt-menu__item');
     let $toggle = $headerMenu.find('.mt-header__menu-toggle');
     let menuClass = 'mt-body--menu-on';
 

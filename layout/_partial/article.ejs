@@ -56,9 +56,9 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                 </div>
             </div>
         <% } %>
-        <% if(!is_archive()){ %>
+        <% if(is_home() || is_post()){ %>
             <footer class="mt-article__footer">
-                <% if (full && (is_home() || is_archive()) && post.comments && config.disqus_shortname) { %>
+                <% if (full && is_home() && post.comments && config.disqus_shortname) { %>
                     <a href="<%- post.permalink %>#disqus_thread"
                        class="mt-article__footer-action  mt-article__comment-link">
                         <svg class="icon">
@@ -66,7 +66,6 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                         </svg>
                         <%= __('comment') %></a>
                 <% } %>
-
                 <% if (!full && is_home() && post.excerpt && theme.excerpt_link){ %>
                     <a href="<%- url_for(post.path) %>#more"
                        class="mt-article__footer-action  mt-article__more-link">

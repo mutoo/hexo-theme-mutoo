@@ -3,27 +3,6 @@
         <h1 class="mt-header__title"><a href="/"><%= config.title %></a></h1>
         <p class="mt-header__subtitle"><%= config.subtitle %></p>
         <%- partial('_partial/menu') %>
-        <% if(is_category()) { %>
-            <div class="mt-header__filter">
-                <svg class="icon">
-                    <use xlink:href="#icon-filter"></use>
-                </svg>
-                Category: <%= page.category %>
-            </div>
-        <% } else if(is_tag()) { %>
-            <div class="mt-header__filter">
-                <svg class="icon">
-                    <use xlink:href="#icon-filter"></use>
-                </svg>
-                Tag: <%= page.tag %>
-            </div>
-        <% } else if(is_year()) { %>
-            <div class="mt-header__filter">
-                <svg class="icon">
-                    <use xlink:href="#icon-filter"></use>
-                </svg>
-                Year: <%= page.year %>
-            </div>
-        <% } %>
+        <%- partial('_partial/filter') %>
     </div>
 </header>

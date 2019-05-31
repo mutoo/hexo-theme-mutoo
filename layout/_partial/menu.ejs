@@ -1,4 +1,4 @@
-<div class="mt-header__menu">
+<nav class="mt-header__menu">
     <a class="mt-header__menu-toggle" role="button" href="#">
         <svg class="icon icon-bars" role="presentation">
             <use xlink:href="#icon-bars"></use>
@@ -8,12 +8,17 @@
         </svg>
     </a>
     <div class="mt-header__menu-wrap">
-        <div class="mt-menu">
+        <ul class="mt-menu">
             <% for (var item in theme.menu){
                 let isActive = is_current(theme.menu[item]); %>
-            <a class="mt-menu__link <%= isActive ? 'active' : '' %>"
-               href="<%- url_for(theme.menu[item]) %>"><%= item %></a>
+            <li class="mt-menu__item">
+                <a class="mt-menu__item-link <%= isActive ? 'active' : '' %>"
+                   href="<%- url_for(theme.menu[item]) %>"><%= item %></a>
+            </li>
             <% } %>
-        </div>
+            <li class="mt-menu__item  mt-menu__item--search">
+                <%- partial('_partial/search') %>
+            </li>
+        </ul>
     </div>
-</div>
+</nav>
