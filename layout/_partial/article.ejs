@@ -10,7 +10,7 @@ if(unsplashId) {
 let articleClass = post.isLatest ? 'mt-article--latest' : '';
 let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''; %>
 <article class="mt-article <%= articleClass %> mt-typography <%= typographyClass %>"
-         id="<%= post.slug %>">
+         id="<%= post.slug %>" lang="<%= post.lang || config.language %>">
     <div class="mt-container  mt-article__container">
         <header class="mt-article__header">
             <div class="mt-article__metas">
@@ -41,7 +41,7 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                 <% } %>
             </h1>
         </header>
-        <% if(full){ %>
+        <% if(full || !post.excerpt){ %>
             <div class="mt-article__body">
                 <%- partial("_partial/front-matter") %>
                 <div class="mt-article__main">
@@ -58,7 +58,7 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
         <% } %>
         <% if(is_home() || is_post()){ %>
             <footer class="mt-article__footer">
-                <% if (full && is_home() && post.comments && config.disqus_shortname) { %>
+                <% if ((full || !post.excerpt) && is_home() && post.comments && config.disqus_shortname) { %>
                     <a href="<%- post.permalink %>#disqus_thread"
                        class="mt-article__footer-action  mt-article__comment-link">
                         <svg class="icon">
@@ -66,13 +66,13 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                         </svg>
                         <%= __('comment') %></a>
                 <% } %>
-                <% if (!full && is_home() && post.excerpt && theme.excerpt_link){ %>
+                <% if (!full && post.excerpt && is_home()){ %>
                     <a href="<%- url_for(post.path) %>#more"
                        class="mt-article__footer-action  mt-article__more-link">
                         <svg class="icon">
                             <use xlink:href="#icon-eye"></use>
                         </svg>
-                        <%= theme.excerpt_link %>
+                        <%= __('read_more') %></a>
                     </a>
                 <% } %>
             </footer>

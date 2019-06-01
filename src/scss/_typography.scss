@@ -5,7 +5,7 @@
 
     font-family: $font-sans-serif;
     font-size: $base-mobile;
-    line-height: 1.5;
+    line-height: 1.6;
     color: $mt-color-standard-text;
 
     @include mq($from: tablet) {
@@ -88,6 +88,9 @@
 
     p {
         margin: 0 0 1em;
+    }
+
+    &[lang=zh] p {
         text-indent: 2em;
     }
 
@@ -97,6 +100,8 @@
     }
 
     li {
+        margin-bottom: 0.5em;
+
         > p:first-child {
             text-indent: 0;
         }

@@ -16,6 +16,7 @@
     $gutter-extra: 0.3rem;
 
     padding: 2rem $gutter-mobile + $gutter-extra;
+    line-height: 1.25;
 
     @include mq($from: tablet) {
         padding: 2rem $gutter-tablet + $gutter-extra;

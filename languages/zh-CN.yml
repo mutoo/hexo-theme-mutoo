@@ -9,10 +9,11 @@ comment: 留言
 archive_a: 归档
 archive_b: 归档：%s
 page: 第 %d 页
+read_more: 阅读全部
 recent_posts: 最新文章
 newer: ⇐
 older: ⇒
-share: Share
+share: 分享
 powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
