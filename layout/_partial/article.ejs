@@ -41,7 +41,7 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                 <% } %>
             </h1>
         </header>
-        <% if(full || !post.excerpt){ %>
+        <% if(full || (is_home() && !post.excerpt)){ %>
             <div class="mt-article__body">
                 <%- partial("_partial/front-matter") %>
                 <div class="mt-article__main">
