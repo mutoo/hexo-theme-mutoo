@@ -24,6 +24,16 @@
                         </a>
                     </p>
                 <% }); %>
+                <% if(config.feed) { %>
+                    <p>
+                        <a class="mt-footer__link" href="<%- url_for(config.feed.path) %>">
+                            <%= __('rss_feed') %>
+                            <svg class="icon">
+                                <use xlink:href="#icon-rss-square"></use>
+                            </svg>
+                        </a>
+                    </p>
+                <% } %>
             </nav>
         </div>
     </div>
