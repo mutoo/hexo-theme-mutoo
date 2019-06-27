@@ -3,6 +3,10 @@ menu:
     Contact: /contact/
     Tags: /tags/
 
+# default creative commons license
+# choose a license at https://creativecommons.org/choose/
+cc: "by"
+
 footer:
     - label: Categories
       link: /categories/

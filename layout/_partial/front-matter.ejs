@@ -1,14 +1,28 @@
 <% if(is_home() || is_post()) { %>
     <div class="mt-article__front-matter">
-        <a class="mt-article__license" href="https://creativecommons.org/licenses/by/4.0/"
-           title="Attribution 4.0 International (CC BY 4.0)" target="_blank">
-            <svg class="icon">
-                <use xlink:href="#icon-cc"></use>
-            </svg>
-            <svg class="icon">
-                <use xlink:href="#icon-by"></use>
-            </svg>
-        </a>
+        <%
+            let cc = theme.cc || 'by';
+            if (post.cc === false) {
+                cc = '';
+            } else if (typeof post.cc === 'string') {
+                cc = post.cc;
+            }
+
+            let CCs = cc.split('-');
+
+        if (CCs[0]) { %>
+            <a class="mt-article__license" href="https://creativecommons.org/licenses/<%= cc %>/4.0/"
+               title="Creative Commons License" target="_blank">
+                <svg class="icon">
+                    <use xlink:href="#icon-cc"></use>
+                </svg>
+                <% CCs.forEach((kind) => { %>
+                    <svg class="icon">
+                        <use xlink:href="#icon-<%= kind %>"></use>
+                    </svg>
+                <% }); %>
+            </a>
+        <% } %>
         <% if (post.tags && post.tags.length){ %>
             <%- list_tags(post.tags, {
                 show_count: false,
