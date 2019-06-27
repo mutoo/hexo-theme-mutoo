@@ -143,8 +143,11 @@
         display: block;
         max-width: 100%;
         margin: 0 auto;
-        border-radius: $border-radius;
-        box-shadow: 0.3rem 0.3rem 3rem 0 rgba(black, 0.10);
+
+        @include mq($from: tablet) {
+            border-radius: $border-radius;
+            box-shadow: 0.3rem 0.3rem 3rem 0 rgba(black, 0.10);
+        }
     }
 
     a {
