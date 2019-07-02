@@ -30,7 +30,8 @@
         <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
     <% if (theme.favicon){ %>
-        <link rel="icon" href="<%- theme.favicon %>">
+        <link rel="shortcut icon" href="<%- theme.favicon %>" type="image/x-icon">
+        <link rel="icon" href="<%- theme.favicon %>" type="image/x-icon">
     <% } %>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
     <%- css('assets/style') %>

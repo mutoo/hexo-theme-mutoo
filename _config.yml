@@ -7,6 +7,10 @@ menu:
 # choose a license at https://creativecommons.org/choose/
 cc: "by"
 
+rss: "/atom.xml"
+
+favicon: "/favicon.ico"
+
 footer:
     - label: Categories
       link: /categories/
