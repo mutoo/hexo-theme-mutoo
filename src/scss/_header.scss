@@ -25,6 +25,7 @@
     margin: 0 0 0.5em;
     font-family: $font-sans-serif;
     font-size: 2.0rem;
+    line-height: 1;
 
     @include mq($from: tablet) {
         font-size: 2.5rem;
@@ -53,10 +54,6 @@
     @include mq($from: tablet) {
         font-size: 1.8rem;
     }
-
-    .icon {
-        top: 0;
-    }
 }
 
 $menu-extend: 1.7rem;
@@ -67,8 +64,9 @@ $menu-extend: 1.7rem;
 }
 
 .mt-header__menu-toggle {
+    display: flex;
     position: relative;
-    margin: -$menu-extend -$menu-extend 0 0;
+    margin: -#{$menu-extend} 0 0;
     padding: $menu-extend;
     font-size: 2.3rem;
     border-radius: 50%;
@@ -79,7 +77,6 @@ $menu-extend: 1.7rem;
     }
 
     .icon {
-        top: 0;
         transition: opacity ease 0.2s;
     }
 
@@ -92,8 +89,8 @@ $menu-extend: 1.7rem;
     .icon-times {
         opacity: 0;
         position: absolute;
-        right: 1.7rem;
-        top: 1.7rem;
+        right: $menu-extend;
+        top: $menu-extend;
 
         .mt-body--menu-on & {
             opacity: 1;
@@ -121,5 +118,6 @@ $menu-extend: 1.7rem;
         right: 0;
         bottom: 0;
         text-align: center;
+        z-index: 1;
     }
 }

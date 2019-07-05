@@ -1,9 +1,13 @@
 .icon {
     display: inline-block;
     position: relative;
-    top: 0.25ex;
+    top: 0.33ex;
     width: 1em;
     height: 1em;
-    vertical-align: top;
+    vertical-align: baseline;
     fill: currentColor;
+}
+
+.icon--flex {
+    top: 0;
 }

@@ -51,16 +51,15 @@
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 1;
-
-    .icon {
-        top: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &[type=reset] {
         display: none;
 
         .mt-search--typed & {
-            display: block;
+            display: flex;
         }
     }
 
