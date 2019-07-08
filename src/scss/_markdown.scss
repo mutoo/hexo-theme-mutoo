@@ -41,6 +41,7 @@
     a {
         font-family: $font-monospace;
         color: $mt-color-footnote-ref;
+        background: none;
         background-color: $mt-color-footnote-ref-bg;
         border-radius: $border-radius-small;
         margin-left: $border-radius-small;
@@ -53,7 +54,10 @@
     }
 }
 
-.footnote-backref {
+a.footnote-backref {
+
+    background: linear-gradient(to bottom, transparent 70%, $mt-color-footnote-ref-bg 70%);;
+
     // hide the footnote in the post list
     .mt-archives .mt-article:not(.mt-article--latest) & {
         display: none;

@@ -15,5 +15,10 @@
     a {
         margin: 0 0.25em;
         text-decoration: none;
+        background: linear-gradient(
+                to bottom,
+                transparent 70%,
+                rgba($mt-color-link, 0.25) 70%
+        );
     }
 }

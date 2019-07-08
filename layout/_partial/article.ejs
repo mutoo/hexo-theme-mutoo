@@ -9,7 +9,7 @@ if(unsplashId) {
 <%
 let articleClass = post.isLatest ? 'mt-article--latest' : '';
 let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''; %>
-<article class="mt-article <%= articleClass %> mt-typography <%= typographyClass %>"
+<article class="mt-article <%= articleClass %>"
          id="<%= post.slug %>" lang="<%= post.lang || config.language %>">
     <div class="mt-container  mt-article__container">
         <header class="mt-article__header">
@@ -44,14 +44,14 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
         <% if(full || (is_home() && !post.excerpt)){ %>
             <div class="mt-article__body">
                 <%- partial("_partial/front-matter") %>
-                <div class="mt-article__main">
+                <div class="mt-article__main  mt-typography <%= typographyClass %>">
                     <%- post.content %>
                 </div>
             </div>
         <% } else if(post.excerpt && is_home()) { %>
             <div class="mt-article__body">
                 <%- partial("_partial/front-matter") %>
-                <div class="mt-article__main">
+                <div class="mt-article__main  mt-typography <%= typographyClass %>">
                     <%- post.excerpt %>
                 </div>
             </div>

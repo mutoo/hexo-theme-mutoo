@@ -81,11 +81,19 @@ $mt-color-search-action:    $color-dove-gray-666;
 $mt-color-standard-text:    $color-mine-shaft-333;
 $mt-color-heading:          black;
 $mt-color-blockquote:       $color-dove-gray-666;
-$mt-color-link:             $color-silver-chalice-aaa;
+$mt-color-link:             $color-scooter;
 $mt-color-code:             $color-river-bed;
 $mt-color-hr:               $color-dove-gray-666;
 $mt-color-unsplash-bg:      $color-alto-ddd;
 $mt-color-filter:           $color-dove-gray-666;
+
+// TYPOGRAPHY
+// ----------
+
+$mt-typography-base-mobile: 1.4rem;
+$mt-typography-base-tablet: 1.6rem;
+$mt-typography-scale: 1.2;
+
 
 // FONTS
 // -----

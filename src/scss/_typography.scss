@@ -1,89 +1,32 @@
 .mt-typography {
-    $base-mobile: 1.4rem;
-    $base-tablet: 1.6rem;
-    $scale: 1.2;
-
-    font-family: $font-sans-serif;
-    font-size: $base-mobile;
-    line-height: 1.6;
-    color: $mt-color-standard-text;
-
-    @include mq($from: tablet) {
-        font-size: $base-tablet;
-    }
+    @include text-standard;
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: $font-sans-serif;
-        margin: 0 0 0.5em;
-        font-weight: bold;
-        color: $mt-color-heading;
-
-        &:not(:first-child) {
-            margin-top: 1em;
-        }
-
-        a {
-            color: inherit;
-        }
+        @include text-heading;
     }
 
     h1 {
-        font-size: $base-mobile * $scale * $scale * $scale;
-        line-height: 1.5;
-        margin-bottom: 0.75em;
-
-        @include mq($from: tablet) {
-            font-size: $base-tablet * $scale * $scale * $scale;
-        }
+        @include text-h1;
     }
 
     h2 {
-        font-size: $base-mobile * $scale * $scale;
-        line-height: 1.5;
-        margin-bottom: 0.5em;
-
-        @include mq($from: tablet) {
-            font-size: $base-tablet * $scale * $scale;
-        }
+        @include text-h2;
     }
 
     h3 {
-        font-size: $base-mobile * $scale;
-        line-height: 1.8;
-
-        @include mq($from: tablet) {
-            font-size: $base-tablet * $scale;
-        }
+        @include text-h3;
     }
 
     h4 {
-        font-size: $base-mobile;
-        line-height: 1.8;
-
-        @include mq($from: tablet) {
-            font-size: $base-tablet;
-        }
+        @include text-h4;
     }
 
     h5 {
-        font-size: $base-mobile / $scale;
-        line-height: 1.6;
-        font-weight: normal;
-
-        @include mq($from: tablet) {
-            font-size: $base-tablet / $scale;
-        }
+        @include text-h5;
     }
 
     h6 {
-        font-size: $base-mobile / $scale;
-        line-height: 1.6;
-        font-weight: normal;
-        font-style: italic;
-
-        @include mq($from: tablet) {
-            font-size: $base-tablet / $scale;
-        }
+        @include text-h6;
     }
 
     p {
@@ -151,8 +94,11 @@
     }
 
     a {
-        text-decoration: underline;
-        text-decoration-color: $mt-color-link;
+        background: linear-gradient(
+                to bottom,
+                transparent 70%,
+                rgba($mt-color-link, 0.5) 70%
+        );
     }
 
     pre, code {

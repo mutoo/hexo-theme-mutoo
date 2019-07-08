@@ -42,6 +42,7 @@
 }
 
 .mt-article__header {
+    @include text-standard;
     padding-bottom: 0.5em;
     border-bottom: 0.1rem dashed $mt-color-border-light;
     margin-bottom: 1em;
@@ -58,7 +59,6 @@
 }
 
 .mt-article__metas {
-    font-family: $font-sans-serif;
     text-transform: uppercase;
     color: $mt-color-meta;
 
@@ -88,6 +88,9 @@ a.mt-article__category-link {
 }
 
 .mt-article__title {
+    @include text-heading;
+    @include text-h1;
+
     margin: 0 !important;
 
     a {
@@ -105,6 +108,7 @@ a.mt-article__category-link {
 }
 
 .mt-article__front-matter {
+    @include text-standard;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -167,6 +171,7 @@ a.mt-article__tag-list-link {
 }
 
 .mt-article__footer {
+    @include text-standard;
     display: flex;
     justify-content: center;
     border-top: 0.1rem dashed $mt-color-border-light;

@@ -29,3 +29,88 @@
         width: calc(100% + 2 * #{$gutter-desktop}) !important;
     }
 }
+
+@mixin text-standard {
+    font-family: $font-sans-serif;
+    font-size: $mt-typography-base-mobile;
+    line-height: 1.6;
+    color: $mt-color-standard-text;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet;
+    }
+}
+
+@mixin text-heading {
+    font-family: $font-sans-serif;
+    margin: 0 0 0.5em;
+    font-weight: bold;
+    color: $mt-color-heading;
+
+    &:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+@mixin text-h1 {
+    font-size: $mt-typography-base-mobile * $mt-typography-scale * $mt-typography-scale * $mt-typography-scale;
+    line-height: 1.5;
+    margin-bottom: 0.75em;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet * $mt-typography-scale * $mt-typography-scale * $mt-typography-scale;
+    }
+}
+
+@mixin text-h2 {
+    font-size: $mt-typography-base-mobile * $mt-typography-scale * $mt-typography-scale;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet * $mt-typography-scale * $mt-typography-scale;
+    }
+}
+
+@mixin text-h3 {
+    font-size: $mt-typography-base-mobile * $mt-typography-scale;
+    line-height: 1.8;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet * $mt-typography-scale;
+    }
+}
+
+@mixin text-h4 {
+    font-size: $mt-typography-base-mobile;
+    line-height: 1.8;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet;
+    }
+}
+
+@mixin text-h5 {
+    font-size: $mt-typography-base-mobile / $mt-typography-scale;
+    line-height: 1.6;
+    font-weight: normal;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet / $mt-typography-scale;
+    }
+}
+
+@mixin text-h6 {
+    font-size: $mt-typography-base-mobile / $mt-typography-scale;
+    line-height: 1.6;
+    font-weight: normal;
+    font-style: italic;
+
+    @include mq($from: tablet) {
+        font-size: $mt-typography-base-tablet / $mt-typography-scale;
+    }
+}
