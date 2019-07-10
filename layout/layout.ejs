@@ -23,7 +23,7 @@
         <% } %>
         <%= config.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <% if (is_archive() || is_tag() || is_category()){ %>
+    <% if ((is_home() && page.prev) || is_archive() || is_tag() || is_category()){ %>
         <meta name="robots" content="noindex, follow">
     <% } %>
     <%- open_graph({twitter_id: theme.twitter}) %>
