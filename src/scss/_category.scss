@@ -28,12 +28,13 @@
     }
 }
 
-.mt-category-list-link {
+a.mt-category-list-link {
     flex: 1 1 auto;
     padding: 0.2rem 0.5rem;
     border-radius: $border-radius 0 0 $border-radius;
     transition: all ease 0.3s;
     text-transform: capitalize;
+    background: none;
 
     &:hover {
         background-color: $mt-color-category-list-bg;
