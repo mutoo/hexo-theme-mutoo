@@ -18,10 +18,7 @@
         title = __('tag') + ': ' + page.tag;
     }
     %>
-    <title>
-        <% if (title){ %><%= title %> |
-        <% } %>
-        <%= config.title %></title>
+    <title><% if (title){ %><%- title -%> | <% } %><%- config.title -%></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <% if ((is_home() && page.prev) || is_archive() || is_tag() || is_category()){ %>
         <meta name="robots" content="noindex, follow">
