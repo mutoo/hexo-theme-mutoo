@@ -12,13 +12,7 @@
 
 .mt-header__container {
     @include clear-fix;
-
     position: relative;
-    max-width: $width-article-max;
-
-    @include mq($from: desktop) {
-        padding: 0;
-    }
 }
 
 .mt-header__title {
@@ -61,6 +55,14 @@ $menu-extend: 1.7rem;
     position: absolute;
     top: 0;
     right: calc(#{$gutter-mobile} - #{$menu-extend});
+
+    @include mq($from: tablet) {
+        right: $gutter-tablet;
+    }
+
+    @include mq($from: desktop) {
+        right: $gutter-desktop;
+    }
 }
 
 .mt-header__menu-toggle {
