@@ -16,19 +16,40 @@
     }
 }
 
+$mt-footer-skew: 3deg;
+
 .mt-footer__container {
     display: flex;
     justify-content: space-between;
     max-width: $width-article-max;
+
+    transform: skewY(-#{$mt-footer-skew});
+    background: $mt-color-site-footer-bg;
+    color: black;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    transition: border-radius ease 0.3s;
+
+    @include mq($from: tablet) {
+        border-radius: 0.5rem;
+    }
+
+    @include mq($from: desktop) {
+        border-radius: 1rem;
+    }
 }
 
 .mt-footer__left {
+    transform: skewY(#{$mt-footer-skew});
+
     a {
         text-decoration: underline;
     }
 }
 
 .mt-footer__right {
+    transform: skewY(#{$mt-footer-skew});
+
     text-align: right;
 }
 
