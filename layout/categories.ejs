@@ -1,7 +1,16 @@
+<%- partial("_partial/post/unsplash") %>
 <article class="mt-article">
     <div class="mt-container  mt-article__container">
         <header class="mt-article__header">
-            <h1><%= page.title %></h1>
+            <div class="mt-article__metas">
+                <span class="mt-article__date">
+                     <%= date(Date.now(), 'MMM DD, YYYY') %>
+                 </span>
+                <svg class="icon">
+                    <use xlink:href="#icon-pencil"></use>
+                </svg>
+            </div>
+            <h1 class="mt-article__title"><%= page.title %></h1>
         </header>
         <div class="mt-article__body">
             <div class="mt-article__main  mt-typography">

@@ -1,11 +1,4 @@
-<%
-let unsplashId = page.unsplash || (is_home() && post.isLatest && post.unsplash);
-if(unsplashId) {
-    let unsplashUrl = `https://source.unsplash.com/${unsplashId}/1440x600`; %>
-<div class="mt-unsplash">
-    <figure style="background-image: url(<%= unsplashUrl %>), url('/assets/hero-pattern.svg') "></figure>
-</div>
-<% } %>
+<%- partial("_partial/post/unsplash") %>
 <%
 let articleClass = post.isLatest ? 'mt-article--latest' : '';
 let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''; %>
