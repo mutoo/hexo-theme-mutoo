@@ -5,8 +5,9 @@ $(() => {
     // bind articles to dots
     $dotNav.find('a').each((idx, el) => {
         let $dot = $(el);
-        let target = $dot.attr('href');
-        $(`.mt-article${target}`).data('dot', $dot);
+        let target = $dot.attr('href').substr(1);
+        // hack: use [attr] rather than # to query id that starts from digits
+        $(`.mt-article[id="${target}"]`).data('dot', $dot);
         $dot.on('focus', (e) => {
             $dotNav.css('opacity', 1);
         });
