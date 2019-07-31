@@ -16,33 +16,33 @@
         title = __('category') + ': ' + page.category;
     } else if (is_tag()) {
         title = __('tag') + ': ' + page.tag;
-    }
-    %>
-    <title><% if (title){ %><%- title -%> | <% } %><%- config.title -%></title>
+    } -%>
+    <title><% if (title){ -%><%- title -%> | <% } -%><%- config.title -%></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <% if ((is_home() && page.prev) || is_archive() || is_tag() || is_category()){ %>
         <meta name="robots" content="noindex, follow">
-    <% } %>
-    <%- open_graph({twitter_id: theme.twitter}) %>
-    <%- partial("_partial/ga") %>
-    <%- partial("_partial/ads") %>
-    <% if (theme.rss){ %>
+    <% } -%>
+    <%- open_graph({twitter_id: theme.twitter}) -%>
+    <%- partial("_partial/adsense") -%>
+    <%- partial("_partial/analytics") -%>
+    <%- partial("_partial/ads") -%>
+    <% if (theme.rss){ -%>
         <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
-    <% } %>
-    <% if (theme.favicon){ %>
+    <% } -%>
+    <% if (theme.favicon){ -%>
         <link rel="shortcut icon" href="<%- theme.favicon %>" type="image/x-icon">
         <link rel="icon" href="<%- theme.favicon %>" type="image/x-icon">
-    <% } %>
+    <% } -%>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
     <%- css('assets/style') %>
 </head>
 <% let bodyClass;
-if(is_home()) bodyClass='mt-body--home';
-else if(is_post()) bodyClass='mt-body--post';
-else if(is_page()) bodyClass='mt-body--page';
-else if(is_archive()) bodyClass='mt-body--archive';
-else if(is_tag()) bodyClass='mt-body--tag';
-else if(is_category()) bodyClass='mt-body--category'; %>
+if (is_home()) bodyClass = 'mt-body--home';
+else if (is_post()) bodyClass = 'mt-body--post';
+else if (is_page()) bodyClass = 'mt-body--page';
+else if (is_archive()) bodyClass = 'mt-body--archive';
+else if (is_tag()) bodyClass = 'mt-body--tag';
+else if (is_category()) bodyClass = 'mt-body--category'; -%>
 <body class="mt-body <%= bodyClass %>">
 <div class="mt-blog">
     <%- partial('_partial/header') %>
@@ -50,8 +50,8 @@ else if(is_category()) bodyClass='mt-body--category'; %>
     <%- partial('_partial/footer') %>
 </div>
 <%- js('assets/script') %>
-<% if (page.mathjax) { %>
-<%- js('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML') %>
-<% } %>
+<% if (page.mathjax) { -%>
+    <%- js('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML') %>
+<% } -%>
 </body>
 </html>

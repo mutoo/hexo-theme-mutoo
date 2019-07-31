@@ -1,3 +1,4 @@
+<% if (theme.google_analytics) { %>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8876369-11"></script>
 <script>
@@ -5,5 +6,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-8876369-11');
+    gtag('config', '<%= theme.google_analytics %>');
 </script>
+<% } -%>
