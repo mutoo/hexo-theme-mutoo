@@ -8,3 +8,4 @@ import './js/menu';
 import './js/highlight';
 import './js/image';
 import './js/search';
+import './js/ads';
