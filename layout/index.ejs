@@ -6,10 +6,11 @@
     if (!lastPost || lastPost && (lastPost.date.year() !== post.date.year())) { %>
         <%- partial('_partial/year', {post}) %>
     <% }
-
         post.isLatest = is_home() && !page.prev && idx === 0; %>
     <%- partial('_partial/article', {post, full: post.isLatest}) %>
-    <%
+    <% if (idx === 0) { %>
+        <%- partial('_partial/ads/archives') %>
+    <% }
         page.mathjax |= post.mathjax;
         lastPost = post;
     }); %>

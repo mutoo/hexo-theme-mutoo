@@ -7,7 +7,9 @@
         <%- partial('_partial/year', {post}) %>
     <% } %>
     <%- partial('_partial/article', {post: post, full: false}) %>
-    <%
+    <% if (idx === 0) { %>
+        <%- partial('_partial/ads/archives') %>
+    <% }
         lastPost = post;
     }); %>
 </div>
