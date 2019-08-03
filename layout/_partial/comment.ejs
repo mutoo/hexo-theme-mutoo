@@ -1,4 +1,5 @@
-<% if (page.published && page.comments && config.disqus_shortname) { %>
+<% let published = is_post() ? page.published : true;
+if (published && page.comments && config.disqus_shortname) { %>
     <div class="mt-comments">
         <div class="mt-container  mt-comments__container">
             <div id="disqus_thread">
