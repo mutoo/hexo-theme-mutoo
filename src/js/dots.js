@@ -17,7 +17,7 @@ $(() => {
     });
 
     // update dots opacity when scrolling
-    let $articles = $('.mt-article');
+    let $articles = $('.mt-article[id]');
     let minAlpha = parseFloat($dotNav.data('min-alpha'));
     let maxAlpha = parseFloat($dotNav.data('max-alpha'));
     let fadeOutTimer;
