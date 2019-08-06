@@ -143,6 +143,15 @@
         border-bottom: 0.1rem dashed $mt-color-hr;
         width: 20rem;
     }
+
+    .ap_container {
+        margin: 0 0 1em;
+
+        iframe {
+            margin-left: 0;
+            width: auto;
+        }
+    }
 }
 
 .mt-typography--serif {
