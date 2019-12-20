@@ -1,8 +1,8 @@
 <% if (page.total > 1){ %>
     <nav class="mt-page-nav">
         <%
-            const prev_text = "&laquo; " + __('prev');
-            const next_text = __('next') + " &raquo;" %>
+            const prev_text = "« " + __('prev');
+            const next_text = __('next') + " »" %>
         <% if (is_home()) { %>
             <%- paginator({
                 prev_text,
