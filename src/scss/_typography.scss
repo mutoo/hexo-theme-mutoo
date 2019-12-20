@@ -1,7 +1,12 @@
 .mt-typography {
     @include text-standard;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @include text-heading;
     }
 
@@ -32,12 +37,13 @@
     p {
         margin: 0 0 1em;
 
-        [lang=zh] & {
+        [lang="zh"] & {
             text-indent: 2em;
         }
     }
 
-    ul, ol {
+    ul,
+    ol {
         margin: 0 0 1em;
         padding-left: 2em;
     }
@@ -58,7 +64,8 @@
         font-size: 1.2em;
         font-family: $font-serif;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             font-family: $font-monospace;
             font-size: 2em;
             display: block;
@@ -66,11 +73,11 @@
         }
 
         &::before {
-            content: '/*';
+            content: "/*";
         }
 
         &::after {
-            content: '*/';
+            content: "*/";
         }
 
         p:last-child {
@@ -89,19 +96,16 @@
 
         @include mq($from: tablet) {
             border-radius: $border-radius;
-            box-shadow: 0.3rem 0.3rem 3rem 0 rgba(black, 0.10);
+            box-shadow: 0.3rem 0.3rem 3rem 0 rgba(black, 0.1);
         }
     }
 
     a {
-        background: linear-gradient(
-                to bottom,
-                transparent 70%,
-                rgba($mt-color-link, 0.5) 70%
-        );
+        background: linear-gradient(to bottom, transparent 70%, rgba($mt-color-link, 0.5) 70%);
     }
 
-    pre, code {
+    pre,
+    code {
         font-family: $font-monospace;
 
         a {
@@ -133,8 +137,11 @@
     }
 
     iframe {
-        @include extend-width;
         margin-bottom: 2em;
+    }
+
+    & > iframe {
+        @include extend-width;
     }
 
     hr {
@@ -142,15 +149,6 @@
         border: none;
         border-bottom: 0.1rem dashed $mt-color-hr;
         width: 20rem;
-    }
-
-    .ap_container {
-        margin: 0 0 1em;
-
-        iframe {
-            margin-left: 0;
-            width: auto;
-        }
     }
 }
 
