@@ -21,7 +21,7 @@ export default () => ({
                             sourceMap: isDevMode,
 
                             // Apply previous loader (postcss-loader) to imported .css files
-                            importLoaders: 1,
+                            importLoaders: 2,
                         },
                     },
 
@@ -40,7 +40,9 @@ export default () => ({
                         loader: 'sass-loader',
                         options: {
                             // Minify if using a production build
-                            outputStyle: isDevMode ? 'nested' : 'compressed',
+                            sassOptions: {
+                                outputStyle: isDevMode ? 'nested' : 'compressed',
+                            },
                             sourceMap: isDevMode,
                         },
                     },
