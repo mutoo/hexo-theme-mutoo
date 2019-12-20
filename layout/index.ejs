@@ -8,7 +8,7 @@
     <% }
         post.isLatest = is_home() && !page.prev && idx === 0; %>
     <%- partial('_partial/article', {post, full: post.isLatest}) %>
-    <% if (idx === 0) { %>
+    <% if (idx % 3 === 0) { %>
         <%- partial('_partial/ads/archives') %>
     <% }
         page.mathjax |= post.mathjax;
