@@ -51,6 +51,7 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                 <div class="mt-article__main  mt-typography <%= typographyClass %>">
                     <% if(post.excerpt && theme.ads_on_more){ %>
                         <%- post.excerpt %>
+                        <a id="more"></a>
                         <%- partial("_partial/ads/posts") %>
                         <%- post.more %>
                         <%- partial("_partial/ads/posts") %>
