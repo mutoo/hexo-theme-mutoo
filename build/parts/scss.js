@@ -19,7 +19,7 @@ export default () => ({
                         loader: 'css-loader',
                         options: {
                             sourceMap: isDevMode,
-
+                            url: false,
                             // Apply previous loader (postcss-loader) to imported .css files
                             importLoaders: 2,
                         },
