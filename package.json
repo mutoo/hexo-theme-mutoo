@@ -9,7 +9,9 @@
     "dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.babel.js --env development --watch",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.babel.js --env production --json > stats.json"
   },
-  "browserslist": ["last 3 versions"],
+  "browserslist": [
+    "last 3 versions"
+  ],
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
