@@ -96,7 +96,7 @@ a.mt-article__category-link {
     a {
         text-decoration: underline;
         text-decoration-color: transparent;
-        transition: all ease 0.3s;
+        transition: text-decoration-color ease 0.3s;
 
         &:hover {
             text-decoration-color: black;
