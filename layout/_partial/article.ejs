@@ -52,12 +52,12 @@ let typographyClass = post.typography ? `mt-typography--${post.typography}` : ''
                     <% if(post.excerpt && theme.ads_on_more){ %>
                         <%- post.excerpt %>
                         <a id="more"></a>
-                        <%- partial("_partial/ads/posts") %>
+                        <%- partial("_partial/ads/posts", {slot: 1295532854}) %>
                         <%- post.more %>
-                        <%- partial("_partial/ads/posts") %>
+                        <%- partial("_partial/ads/posts", {slot: 9552810441}) %>
                     <% } else { %>
                         <%- post.content %>
-                        <%- partial("_partial/ads/posts") %>
+                        <%- partial("_partial/ads/posts", {slot: 9552810441}) %>
                     <% } %>
                 </div>
             </div>
