@@ -20,6 +20,9 @@ import scss from 'highlight.js/lib/languages/scss';
 import tex from 'highlight.js/lib/languages/tex';
 import xml from 'highlight.js/lib/languages/xml';
 import yaml from 'highlight.js/lib/languages/yaml';
+import wrap from '../lang/wrap';
+
+// highlight.js does not format any block which was marked with /^(no-?highlight|plain|text)$/i
 
 hljs.registerLanguage('apache', apache);
 hljs.registerLanguage('apacheconfig', apache);
@@ -39,12 +42,12 @@ hljs.registerLanguage('markdown', markdown);
 hljs.registerLanguage('makefile', makefile);
 hljs.registerLanguage('objc', objc);
 hljs.registerLanguage('php', php);
-// hljs.registerLanguage('plain', plain);
 hljs.registerLanguage('processing', processing);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('scss', scss);
 hljs.registerLanguage('tex', tex);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('yaml', yaml);
+hljs.registerLanguage('wrap', wrap);
 
 hljs.initHighlightingOnLoad();
