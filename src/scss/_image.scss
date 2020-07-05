@@ -21,14 +21,16 @@
     opacity: 0;
 }
 
-p.mt-img {
+p.mt-img,
+p.mt-video {
     margin-bottom: 2em;
     text-align: center;
     font-size: 0.8em;
     color: $mt-color-img-caption;
 }
 
-p.mt-img--full-width {
+p.mt-img--full-width,
+p.mt-video--full-width{
     @include extend-width;
 }
 
