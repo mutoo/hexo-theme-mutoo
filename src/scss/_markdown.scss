@@ -47,25 +47,20 @@
         margin-left: $border-radius-small;
         text-decoration: none;
     }
-
-    // hide the footnote in the post list
-    .mt-archives .mt-article:not(.mt-article--latest) & {
-        display: none;
-    }
 }
 
 a.footnote-backref {
-
     background: linear-gradient(to bottom, transparent 70%, $mt-color-footnote-ref-bg 70%);;
+}
 
+a.footnote-backref,
+.footnote-ref,
+.footnotes-sep,
+.footnotes {
     // hide the footnote in the post list
     .mt-archives .mt-article:not(.mt-article--latest) & {
         display: none;
     }
-}
-
-.footnotes-sep {
-
 }
 
 .footnote-item {
